@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zheng.yu.mapper.ShoppingCarMapper">
+
+    <!--    增加车辆-->
+    <insert id="addShoppingCar" parameterType="com.zheng.yu.pojo.Shopping_car">
+        insert into carshop.shopping_car(car_id,name,username,color,imageUrl,num,guarantee_money,type)
+        values(#{car_id},#{name},#{username},#{color},#{imageUrl},#{num},#{guarantee_money},#{type})
+    </insert>
+
+    <!--    删除车辆信息-->
+    <delete id="deleteShoppingCar">
+        delete from carshop.shopping_car  where car_id =#{car_id}
+    </delete>
+
+    <!--    修改车辆信息-->
+    <update id="updateShoppingCar" parameterType="com.zheng.yu.pojo.Shopping_car">
+        update carshop.shopping_car
+        set num=#{num}
+        where car_id = #{car_id}
+    </update>
+
+
+    <!--    分页查询-->
+    <select id="findShoppingCarByName" resultType="com.zheng.yu.pojo.Shopping_car">
+         select * from carshop.shopping_car where username =#{username}
+    </select>
+
+
+
+</mapper>

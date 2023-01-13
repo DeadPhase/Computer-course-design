@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zheng.yu.mapper.ScoretableMapper">
+
+    <!--    分页查询用户积分-->
+    <select id="scoreListPage" parameterType="Map" resultType="com.zheng.yu.pojo.Scoretable">
+        select * from carshop.scoretable  limit  #{startIndex},#{pageSize}
+    </select>
+
+    <!--    查询总数-->
+    <select id="findScoreTotals" resultType="Long">
+        select count(*) from carshop.scoretable
+    </select>
+
+    <!--    查询某一个用户积-->
+    <select id="findOneScoreById" resultType="com.zheng.yu.pojo.Scoretable">
+        select * from carshop.scoretable where username = #{username};
+    </select>
+
+    <!--    修改积分-->
+    <update id="updateScore" parameterType="com.zheng.yu.pojo.Scoretable">
+        update carshop.scoretable set score =#{score} where username =#{username}
+    </update>
+
+    <!--    删除积分-->
+    <delete id="deleteScore">
+        delete from carshop.scoretable where username =#{username}
+    </delete>
+
+    <!--    初始化积分-->
+    <insert id="addScore" parameterType="com.zheng.yu.pojo.Scoretable">
+       insert into carshop.scoretable(username,score) values(#{username},#{score})
+
+   </insert>
+
+
+    <!--    ===============积分兑换记录==================-->
+
+    <!--    增加积分兑换记录-->
+    <insert id="addScoreExchange" parameterType="com.zheng.yu.pojo.Score_exchange">
+        insert into score_exchange(username,exchanged_credit,product_id)
+         values (#{username},#{exchanged_credit},#{product_id})
+    </insert>
+
+    <!--    删除积分兑换记录-->
+    <delete id="deleteScoreExchange">
+        delete from score_exchange  where id =#{id}
+    </delete>
+
+    <delete id="deleteUserScoreExchange">
+        delete from carshop.score_exchange where username = #{username}
+    </delete>
+
+    <!--    查看一个用户的积分兑换记录-->
+    <select id="findAllScoreExchange" resultType="com.zheng.yu.pojo.Score_exchange">
+        select * from carshop.score_exchange where username=#{username}
+    </select>
+
+
+</mapper>

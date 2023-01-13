@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zheng.yu.mapper.CarMapper">
+
+<!--    查看汽车库存数量-->
+    <select id="findCarNum" resultType="java.lang.Integer">
+        select car_num from carshop.car where car_id =#{id}
+    </select>
+
+<!--    修改汽车库存数量-->
+    <update id="updateCarNum">
+        update carshop.car set car_num =#{car_num} where car_id=#{car_id}
+    </update>
+
+<!--汽车上下架-->
+    <update id="updateCarStatus" >
+        update carshop.car   set status=#{status} where car_id = #{car_id}
+    </update>
+
+    <!--    增加车辆-->
+    <insert id="addCar" parameterType="com.zheng.yu.pojo.Car">
+        insert into carshop.car(name,license_plate_car,color,date,guarantee_money,type,imageUrl,status,remark,car_num)
+        values(#{name},#{license_plate_car},#{color},#{date},#{guarantee_money},#{type},#{imageUrl},#{status},#{remark},#{car_num})
+    </insert>
+
+<!--     真实删除-->
+    <delete id="deleteCarLogical">
+        delete from carshop.car where car_id =#{car_id}
+    </delete>
+
+    <!--    修改车辆信息-->
+    <update id="updateCar" parameterType="com.zheng.yu.pojo.Car">
+        update carshop.car
+        set name=#{name},color=#{color},guarantee_money=#{guarantee_money},
+       type=#{type}
+        where car_id = #{car_id}
+    </update>
+
+    <!--    根据id查询某一个车辆的信息-->
+    <select id="findOneCar" resultType="com.zheng.yu.pojo.Car">
+        select * from carshop.car  where car_id =#{car_id}
+    </select>
+
+    <!--    查询所有的车辆-->
+    <select id="carList" resultType="com.zheng.yu.pojo.Car">
+                 select * from carshop.car where status =1
+    </select>
+
+    <!--    分页查询-->
+    <select id="findCarListPage" resultType="com.zheng.yu.pojo.Car">
+         select * from carshop.car limit  #{startIndex},#{pageSize}
+    </select>
+
+    <select id="findCarListPageByUser" resultType="com.zheng.yu.pojo.Car">
+         select * from carshop.car where status =1  limit  #{startIndex},#{pageSize}
+    </select>
+
+
+    <!--    查询汽车总数-->
+    <select id="findCarTotals" resultType="Long">
+         select count(*) from carshop.car
+    </select>
+
+    <!--    用户查看查询汽车总数-->
+    <select id="persionFindCarTotals" resultType="Long">
+         select count(*) from carshop.car where status =1
+    </select>
+
+<!--    顾客查询汽车-->
+    <select id="findSomeCarByUser"  parameterType="com.zheng.yu.pojo.Car" resultType="com.zheng.yu.pojo.Car">
+        select * from carshop.car
+        <where>
+            1=1
+            <if test="name != null and name != ''">
+                And name =#{name}
+            </if>
+<!--            <if test="type != null and type != ''">-->
+<!--                And type =#{type}-->
+<!--            </if>-->
+<!--            <if test="color != null and color !=''">-->
+<!--                And color =#{color}-->
+<!--            </if>-->
+
+        </where>
+    </select>
+
+
+    <select id="findSomeCar" parameterType="com.zheng.yu.pojo.Car" resultType="com.zheng.yu.pojo.Car">
+        select * from carshop.car
+        <where>
+            1=1
+            <if test="name != null and name != ''">
+                And name =#{name}
+            </if>
+            <if test="type != null and type != ''">
+                And type =#{type}
+            </if>
+            <if test="color != null and color !=''">
+                And color =#{color}
+            </if>
+
+        </where>
+    </select>
+
+<!--    汽车类型-->
+    <insert id="addCarType" parameterType="com.zheng.yu.pojo.CarType">
+        insert into carshop.cartype(type,car_order_num,car_type_num)
+        values(#{type},#{car_order_num},#{car_type_num})
+    </insert>
+
+    <select id="isExit" resultType="com.zheng.yu.pojo.CarType">
+        select * from carshop.cartype where type=#{type};
+    </select>
+
+    <delete id="deleteCarType">
+        delete from carshop.cartype where id =#{id}
+    </delete>
+
+    <update id="updateCarType" parameterType="com.zheng.yu.pojo.CarType" >
+        update carshop.cartype   set type=#{type} where id = #{id}
+    </update>
+
+    <select id="findCarType" resultType="com.zheng.yu.pojo.CarType">
+        select * from carshop.cartype;
+    </select>
+
+
+
+
+
+
+</mapper>

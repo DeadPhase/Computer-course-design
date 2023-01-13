@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zheng.yu.mapper.WalletMapper">
+
+    <!--    ===================充值记录===========================-->
+
+    <!--    为新用户自动分配一个钱包-->
+    <insert id="addCustomerWaller" parameterType="com.zheng.yu.pojo.Wallet">
+        insert into carshop.wallet(money,username)
+        values (#{money},#{username})
+
+    </insert>
+
+<!--    &lt;!&ndash;    根据账户查询充值记录&ndash;&gt;-->
+<!--    <select id="paylogList" resultType="com.example.zheng.pojo.Paylog">-->
+<!--        select * from paylog where usercount =#{usercount}  order by pay_time desc-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash;    删除充值记录&ndash;&gt;-->
+<!--    <delete id="deletePayLog">-->
+<!--        delete from paylog where pId=#{pId}-->
+<!--    </delete>-->
+
+    <!--    增加充值记录-->
+    <insert id="addPaylog" parameterType="com.zheng.yu.pojo.Paylog">
+        insert into carshop.paylog (username,money,pay_time) values(#{username},#{money},#{pay_time})
+    </insert>
+
+
+    <!--    查询-->
+    <select id="querywallet" resultType="com.zheng.yu.pojo.Wallet">
+        select * from carshop.wallet where username =#{username}
+    </select>
+
+    <!--    金额的充值-->
+    <update id="updateWallet" parameterType="com.zheng.yu.pojo.Wallet"  >
+        update carshop.wallet set money =#{money} where username=#{username}
+    </update>
+
+<!--    查看个人充值记录-->
+    <select id="findPayLog" resultType="com.zheng.yu.pojo.Paylog">
+        select * from carshop.paylog where username =#{username} order by pay_time desc
+    </select>
+
+    <delete id="deletePayLog">
+        delete from carshop.paylog where pid =#{pid}
+    </delete>
+
+
+
+
+
+</mapper>

@@ -1,0 +1,63 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/carshop?allowMultiQueries=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+
+    logging:
+      config: classpath:logback-spring.xml
+
+
+
+    #spring boot 默认是不注入这些属性的，需要自己绑定
+    #druid 数据源专有配置
+    initiaSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsmMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+
+    filters: stat,wall,log4j
+    maxPoolPrepareStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+  #    连接redis数据库
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+
+
+server:
+  port: 8282
+
+
+pictureFile:
+  path: "F:/BISHE/upload/"
+  path-mapping: "/myImg/"
+
+
+
+
+resources:
+  static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${pictureFile.path-mapping}
+
+
+
+
+
+

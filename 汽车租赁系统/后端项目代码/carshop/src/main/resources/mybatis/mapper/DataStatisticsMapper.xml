@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zheng.yu.mapper.DataStatisticsMapper">
+
+    <!--    查询当天的订单量-->
+    <select id="findOrderDay" resultType="Long">
+         select count(*) from carshop.orders
+         where create_time BETWEEN CONCAT(CURDATE(),' 00:00:00') AND CONCAT(CURDATE(),' 23:59:59');
+    </select>
+
+    <!--    查询当天的新增用户数量-->
+    <select id="findUserDay" resultType="Long">
+         select count(*) from carshop.user
+         where time BETWEEN CONCAT(CURDATE(),' 00:00:00') AND CONCAT(CURDATE(),' 23:59:59');
+    </select>
+
+    <!--    查询当天上架的汽车数量-->
+    <select id="findCarDay" resultType="Long">
+         select count(*) from carshop.car
+          where date BETWEEN CONCAT(CURDATE(),' 00:00:00') AND CONCAT(CURDATE(),' 23:59:59');
+    </select>
+
+<!--    查询汽车类型总的租赁情况-->
+    <select id="getCarTypeNum" resultType="java.util.HashMap">
+     select type as name ,count(type) as value from carshop.order_item group by type
+    </select>
+
+    <select id="getCarRanking" resultType="java.util.HashMap">
+       select name ,count(name) as value from carshop.order_item
+                    group by name
+                    order by count(name) desc limit 6
+    </select>
+
+
+</mapper>

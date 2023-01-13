@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zheng.yu.mapper.DiscountCouponMapper">
+
+<!--    增加优惠券-->
+    <insert id="addDiscountCoupon" parameterType="com.zheng.yu.pojo.Discount_coupon">
+        insert into carshop.discount_coupon (name, type, num, instructions, userType, receive, startTime, endTime)
+        values (#{name}, #{type}, #{num}, #{instructions}, #{userType}, #{receive}, #{startTime}, #{endTime})
+    </insert>
+
+<!--    删除优惠券-->
+    <delete id="deleteDiscountCoupon">
+        delete from carshop.discount_coupon where id = #{id}
+    </delete>
+
+<!--    修改优惠券-->
+    <update id="updateDiscountCoupon" parameterType="com.zheng.yu.pojo.Discount_coupon">
+        update carshop.discount_coupon
+        set name = #{name}, type =#{type}, num = #{num}, instructions = #{instructions}, userType = #{userType},receive = #{receive},startTime =  #{startTime},endTime= #{endTime}
+        where id = #{id}
+    </update>
+
+<!--    用户查看商家提供的优惠券-->
+    <select id="findAllDiscount" resultType="com.zheng.yu.pojo.Discount_coupon">
+        select * from carshop.discount_coupon order by startTime desc
+    </select>
+
+<!--    查看优惠券-->
+    <select id="lookDiscountCouponPage" parameterType="Map" resultType="com.zheng.yu.pojo.Discount_coupon">
+      select * from carshop.discount_coupon limit  #{startIndex},#{pageSize};
+    </select>
+
+    <!--    查看某一个优惠券-->
+    <select id="lookOneDiscountCoupon"  resultType="com.zheng.yu.pojo.Discount_coupon">
+      select * from carshop.discount_coupon where id=#{id}
+    </select>
+
+
+<!--    查看多少条数据-->
+    <select id="discountCouponTotals" resultType="Long">
+        select count(*) from carshop.discount_coupon
+    </select>
+
+<!--    ===========================用户优惠券的管理==============-->
+    <insert id="addPersionDiscount" parameterType="com.zheng.yu.pojo.PersionDiscountTable">
+        insert into carshop.persion_discount_table (name, username,type, startTime,endTime,num,instruction)
+        values (#{name}, #{username},#{type},#{startTime},#{endTime}, #{num}, #{instruction})
+    </insert>
+
+    <delete id="deletePersionDiscountById">
+        delete from carshop.persion_discount_table where id = #{id}
+    </delete>
+
+    <select id="findPersionDiscout" resultType="com.zheng.yu.pojo.PersionDiscountTable">
+        select * from carshop.persion_discount_table where username =#{username}
+    </select>
+
+
+
+
+
+</mapper>

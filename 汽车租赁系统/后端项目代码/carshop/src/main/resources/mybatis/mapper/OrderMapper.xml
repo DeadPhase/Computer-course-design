@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zheng.yu.mapper.OrderMapper">
+
+    <select id="saleInFirstThree" resultType="java.util.HashMap">
+            select count(name) 'number',name
+            from carshop.order_item
+            group by name
+            order by count(name) desc
+            limit 0 ,3
+    </select>
+
+
+
+<!--    //查看已经完成的历史订单-->
+    <select id="findHistoryOrderPersion" resultType="com.zheng.yu.pojo.order.Orders">
+          select * from carshop.orders where user_cancle = 0 and status = 5 and user_log_cancle =0 and username =#{username} order by create_time desc
+    </select>
+<!--    取车-->
+    <update id="getCar" parameterType="com.zheng.yu.pojo.order.Orders">
+        update carshop.orders set status =4 where order_id =#{order_id}
+    </update>
+
+    <!--    还车-->
+    <update id="returnCar" parameterType="com.zheng.yu.pojo.order.Orders">
+        update carshop.orders set status =5 where order_id =#{order_id}
+    </update>
+
+<!--    修改支付状态-->
+    <update id="updateCarPayStatus">
+        update carshop.orders set status = 1 where order_id=#{order_id}
+    </update>
+
+    <!--    订单信息表的增删改查-->
+    <!--    增加一个订单信息-->
+    <insert id="addOrders" parameterType="com.zheng.yu.pojo.order.Orders">
+        insert into carshop.orders(order_id, prepayment,create_time,user_id,username,status,user_cancle,user_log_cancle,address,phone,usetime)
+        values (#{order_id}, #{prepayment}, #{create_time},#{user_id},#{username},#{status},#{user_cancle},#{user_log_cancle},#{address},#{phone},#{usetime})
+    </insert>
+
+<!--    条件查询订单信息-->
+    <select id="ConditionOneOrders" parameterType="com.zheng.yu.pojo.order.Orders" resultType="com.zheng.yu.pojo.order.Orders">
+        select * from carshop.orders
+        <where>
+            1=1
+            <if test="order_id != null and order_id != ''">
+                And order_id = #{order_id}
+            </if>
+        </where>
+    </select>
+
+    <!--    删除一个订单信息-->
+    <delete id="deleteOrderById">
+        delete from carshop.orders where order_id =#{order_id}
+    </delete>
+
+    <!--    查询所有的订单信息-->
+    <select id="queryAllOrders" parameterType="Map" resultType="com.zheng.yu.pojo.order.Orders">
+        select * from carshop.orders where status != '5' order by create_time desc  limit  #{startIndex},#{pageSize}
+    </select>
+
+    <select id="queryAllFinishOrders" resultType="com.zheng.yu.pojo.order.Orders">
+         select * from carshop.orders  where status = 5 order by create_time desc
+    </select>
+
+    <!--    查询订单条数-->
+    <select id="findOrderTotals" resultType="Long">
+        select count(*) from carshop.orders where status != '5';
+    </select>
+
+    <!--    查询某一个订单-->
+    <select id="queryOneOrders" resultType="com.zheng.yu.pojo.order.Orders">
+        select * from carshop.orders where username =#{username}and user_cancle =0 order by create_time  desc
+limit 0 ,1
+    </select>
+
+
+    <!--    订单详情表的增删改查-->
+    <!--    增加订单详情表-->
+    <insert id="addOrderItem" parameterType="com.zheng.yu.pojo.order.Order_item">
+        insert into carshop.order_item(id, car_id, order_id, num, name, color, type, imageUrl, price, total_price, daynum)
+        values (#{id}, #{car_id}, #{order_id}, #{num}, #{name}, #{color}, #{type}, #{imageUrl}, #{price}, #{total_price}, #{daynum})
+    </insert>
+
+    <!--    删除订单详情表-->
+    <delete id="deleteOrderItemById">
+        delete from carshop.order_item where order_id = #{order_id}
+    </delete>
+
+<!--    根据订单查询一个订单-->
+    <select id="findOneOrderById" resultType="com.zheng.yu.pojo.order.Orders">
+        select * from carshop.orders where order_id =#{order_id}
+    </select>
+
+    <!--    查询个人订单信息-->
+    <select id="findOrderOnlyPersion" resultType="com.zheng.yu.pojo.order.Orders">
+        select * from carshop.orders where user_cancle = 0 and status != '5' and username =#{name}  order by create_time desc
+    </select>
+
+    <!--    逻辑删除订单详情表-->
+    <update id="delete_Persion_Order_Logical">
+        update carshop.orders
+        set user_cancle = 1
+        where order_id =#{order_id}
+    </update>
+
+    <!--    查询所有的订单详情-->
+    <select id="queryAllOrderItem" resultType="com.zheng.yu.pojo.order.Order_item">
+        select * from carshop.order_item
+    </select>
+
+
+
+    <!--    查询某一个订单详情-->
+    <select id="queryOneOrderItem" resultType="com.zheng.yu.pojo.order.Order_item">
+        select * from carshop.order_item where order_id =#{order_id};
+    </select>
+
+    <!--    订单配送表的增删改查-->
+    <!--    增加订单配送-->
+    <insert id="addOrderShipping" parameterType="com.zheng.yu.pojo.order.Order_shipping">
+        insert into carshop.order_shipping(order_id, receiver_name, receiver_phone, receiver_state, receiver_city, receiver_district)
+        values (#{order_id}, #{receiver_name}, #{receiver_phone}, #{receiver_state}, #{receiver_city}, #{receiver_district})
+    </insert>
+
+    <!--    删除订单配送表-->
+    <delete id="deleteOrderShipping">
+        delete from carshop.order_shipping where order_id =#{order_id}
+    </delete>
+
+    <!--    修改订单配送表-->
+    <update id="updateOrderShipping" parameterType="com.zheng.yu.pojo.order.Order_shipping">
+        update carshop.order_shipping
+        set receiver_name = #{receiver_name}, receiver_phone = #{receiver_phone}, receiver_state = #{receiver_state}, receiver_city = #{receiver_city}, receiver_district =#{receiver_district}
+        where order_id =#{order_id}
+    </update>
+
+    <!--    查询所有的订单配送表-->
+    <select id="queryAllOrderShipping" resultType="com.zheng.yu.pojo.order.Order_shipping">
+        select * from carshop.order_shipping
+    </select>
+
+    <!--    根据订单号查询订单配送表-->
+    <select id="queryOneOrderShipping" resultType="com.zheng.yu.pojo.order.Order_shipping">
+        select * from carshop.order_shipping where order_id = #{order_id}
+    </select>
+
+</mapper>

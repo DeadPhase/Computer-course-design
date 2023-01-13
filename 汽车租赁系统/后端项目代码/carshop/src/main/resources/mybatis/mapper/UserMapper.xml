@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zheng.yu.mapper.UserMapper">
+
+<!--    登录-->
+    <select id="login" parameterType="Map" resultType="com.zheng.yu.pojo.User">
+        select * from user where name=#{name} and password=#{password}
+    </select>
+
+<!--    用户注册-->
+    <insert id="register" parameterType="com.zheng.yu.pojo.User">
+        insert into carshop.user(name,count,password,phone,time,vip) values
+        (#{name},#{count},#{password},#{phone},#{time},#{vip})
+    </insert>
+
+<!--    查看是否有用户已经注册-->
+    <select id="findUserRegister" resultType="com.zheng.yu.pojo.User">
+        select * from carshop.user where count =#{count}
+    </select>
+
+<!--    查询所有的用户-->
+    <select id="userList" resultType="com.zheng.yu.pojo.User">
+        select * from carshop.user
+    </select>
+
+
+<!--    根据用户名和密码登录-->
+    <select id="getUserByUsername" resultType="com.zheng.yu.pojo.User">
+        select * from carshop.user where name =#{name} and password =#{password}
+    </select>
+
+
+<!--    根据count查询用户是否登录（账号）-->
+    <select id="findUserByCount" resultType="com.zheng.yu.pojo.User">
+        select * from carshop.user where count =#{count};
+    </select>
+
+   <select id="findOneUser" resultType="com.zheng.yu.pojo.User">
+       select * from carshop.user where name =#{name};
+   </select>
+
+<!--    删除某一个用户的信息根据id-->
+    <delete id="deleteOneUser">
+        delete from carshop.user where user_id = #{user_id}
+    </delete>
+
+<!--    更新用户的信息-->
+    <update id="updateOneUser" parameterType="com.zheng.yu.pojo.User">
+        update carshop.user
+        set count=#{count},name=#{name},password=#{password},phone=#{phone}
+        where user_id =#{user_id}
+    </update>
+
+<!--    修改密码-->
+    <update id="updatePassword" parameterType="Map" >
+        update carshop.user
+        set password = #{password}
+        where user_id = #{user_id}
+    </update>
+
+    <!--    分页查询-->
+    <select id="queryUserList" parameterType="Map" resultType="com.zheng.yu.pojo.User">
+        select * from carshop.user limit  #{startIndex},#{pageSize}
+    </select>
+
+    <select id="findUserTotals" resultType="Long">
+        select count(*) from carshop.user
+    </select>
+
+    <select id="findSomeUser" parameterType="com.zheng.yu.pojo.User" resultType="com.zheng.yu.pojo.User">
+        select * from carshop.user
+        <where>
+            1=1
+            <if test="name != null and name != ''">
+                And name =#{name}
+            </if>
+            <if test="count != null and count != ''">
+                And count =#{count}
+            </if>
+            <if test="phone != null and phone !=''">
+                And phone =#{phone}
+            </if>
+
+        </where>
+    </select>
+
+
+
+
+
+
+</mapper>
