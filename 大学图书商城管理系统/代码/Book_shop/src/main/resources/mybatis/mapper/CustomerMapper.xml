@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.zheng.mapper.CustomerMapper">
+
+
+    <insert id="addCustomerRole" parameterType="com.example.zheng.pojo.CustomerRole">
+        insert into customer_r (crId,usercount,roleId)
+        values (#{crId},#{usercount},#{roleId})
+    </insert>
+
+    <!--    增加一个顾客信息-->
+    <insert id="addCustomer" parameterType="com.example.zheng.pojo.Customer">
+  insert into customer (usercount,name,sex,age,email,tel,address,password,is_delete)
+   values(#{usercount},#{name},#{sex},#{age},#{email},#{tel},#{address},#{password},#{is_delete})
+
+    </insert>
+
+    <!--    根据顾客账号查询顾客信息-->
+    <select id="queryCustomerById" resultType="com.example.zheng.pojo.Customer">
+        select * from customer where usercount=#{usercount}
+    </select>
+
+    <!--    查询用户的所有信息-->
+    <select id="queryCustomerList" resultType="com.example.zheng.pojo.Customer">
+        select  * from customer where is_delete =1
+    </select>
+
+    <!--查询某一个用户的信息-->
+    <select id="queryById" resultType="com.example.zheng.pojo.Customer" >
+        select  * from customer where usercount=#{id}
+    </select>
+
+    <!--    物理删除删除一个客户信息通过账户-->
+    <delete id="deleteCustomer" >
+       delete from customer where usercount=#{usercount}
+   </delete>
+
+<!--    逻辑删除-->
+    <update id="logicalDeleteCustomer">
+        update customer set is_delete=0 where usercount=#{usercount}
+    </update>
+
+
+<!--    修改顾客的信息-->
+    <update id="updateCustomer"  parameterType="com.example.zheng.pojo.Customer">
+        update customer set  usercount=#{usercount},name=#{name},sex=#{sex},age=#{age},email=#{email},tel=#{tel},address=#{address}
+        where usercount=#{usercount}
+    </update>
+
+    <!--修改密码-->
+    <update id="updatePassword" parameterType="com.example.zheng.pojo.Customer">
+        update customer set password=#{password} where usercount=#{usercount}
+    </update>
+
+
+
+<!--    ===================收货地址============================-->
+<!--    增加收获地址-->
+    <insert id="addAddress" parameterType="com.example.zheng.pojo.Hvaddress">
+        insert into hvaddress(haId,usercount,name,address,tel) values(#{haId},#{usercount},#{name},#{address},#{tel})
+    </insert>
+
+<!--    删除收获地址、物理删除-->
+    <delete id="deleteAddress">
+        delete  from hvaddress where haId=#{haId}
+    </delete>
+
+<!--    修改收获地址-->
+    <update id="updateAddress" parameterType="com.example.zheng.pojo.Hvaddress">
+        update hvaddress set name =#{name},usercount =#{usercount},address =#{address},tel =#{tel} where haId=#{haId}
+    </update>
+
+    <select id="addressList" parameterType="com.example.zheng.pojo.Hvaddress" resultType="com.example.zheng.pojo.Hvaddress">
+        select * from hvaddress
+        <where>
+            1=1
+            <if test="haId != null and haId != ''">
+                And haId=#{haId}
+            </if>
+            <if test="usercount != null and usercount !=''">
+                And usercount =#{usercount}
+            </if>
+        </where>
+    </select>
+
+<!--    ===================充值记录===========================-->
+
+<!--    为新用户自动分配一个钱包-->
+    <insert id="addCustomerWaller" parameterType="com.example.zheng.pojo.Wallet">
+        insert into wallet(wId,balance,usercount)
+        values (#{wId},#{balance},#{usercount})
+
+    </insert>
+
+<!--    根据账户查询充值记录-->
+    <select id="paylogList" resultType="com.example.zheng.pojo.Paylog">
+        select * from paylog where usercount =#{usercount}  order by pay_time desc
+    </select>
+
+<!--    删除充值记录-->
+    <delete id="deletePayLog">
+        delete from paylog where pId=#{pId}
+    </delete>
+    
+<!--    增加充值记录-->
+    <insert id="addPaylog" parameterType="com.example.zheng.pojo.Paylog">
+        insert into paylog (pId,usercount,money,pay_time) values(#{pId},#{usercount},#{money},#{pay_time})
+    </insert>
+
+
+<!--    钱包的管理-->
+    <select id="querywallet" resultType="com.example.zheng.pojo.Wallet">
+        select * from wallet where usercount =#{usercount}
+    </select>
+
+<!--    金额的充值-->
+    <update id="updateWallet">
+        update wallet set balance =#{balance} where usercount=#{usercount}
+    </update>
+
+</mapper>

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.thymeleaf.org/thymeleaf-extras-shiro" >
+<head>
+    <meta charset="UTF-8">
+    <title>当前账单的详细信息</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color: aliceblue">
+
+
+<div class="container" style="background-color: aliceblue">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <small>当前购物单商品列表----------显示当前购物单商品</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+                    <!--                    <th>书籍编号</th>-->
+                    <th>书籍名称</th>
+                    <th>书籍作者</th>
+                    <th>书籍价格</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--查询书籍处理-->
+                <tbody>
+                <tr th:each="goods:${buylogdetail}">
+                    <td th:text="${goods.getBookName()}">书名</td>
+                    <td th:text="${goods.getCount()}">数量</td>
+                    <td th:text="${goods.getPrice()}">价格</td>
+                    <td><a class="btn btn-primary" onclick="javascript:return p_del()"  th:href="@{/shop/toComment(bgId=${goods.getBgId()})}" >去评论</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="col-md-6">
+                <a class="btn btn-primary" th:href="@{/shop/buylog}">返回首页</a>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    function p_del() {
+        var msg = "请再次确认您的操作";
+        if (confirm(msg)==true){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+</script>
+</body>
+</html>
+
+
+

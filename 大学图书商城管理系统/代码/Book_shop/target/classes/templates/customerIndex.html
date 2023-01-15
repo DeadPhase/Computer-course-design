@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.thymeleaf.org/thymeleaf-extras-shiro" >
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="bootstrap.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body style="background-color: aliceblue">
+<!--最外层的布局容器-->
+<div class="container">
+
+    <!--导航栏部分-->
+    <nav class="navbar navbar-inverse" style="background-color: aliceblue">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">首页</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li>
+                        <a  th:href="@{/logout}">注销<span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li>
+                        <a shiro:hasPermission="shop:status" th:href="@{/shop/status}">订单状态</a>
+                    </li>
+
+                    <li>
+                        <a th:href="@{/book/bookList}">书籍商城</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a  href="#" class="dropdown-toggle" data-toggle="dropdown" >钱包管理 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li >
+                                <a shiro:hasPermission="customer:wallet" th:href="@{/customer/wallet}">余额查询</a>
+                            </li>
+                            <li >
+                                <a shiro:hasPermission="customer:wallet" th:href="@{/customer/torecharge}">充值</a>
+                            </li>
+                            <li >
+                                <a shiro:hasPermission="customer:paylog" th:href="@{/customer/paylog}">充值记录</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
+        <div class="row" >
+            <div class="col-md-1"></div>
+            <div class="col-sm-6 col-md-4" >
+                <div class="thumbnail" style="background-color: aliceblue">
+                    <img src="../img/info/people.jpg" alt="...">
+                    <div class="caption" >
+                        <h3 >个人信息展示</h3>
+                        <p>
+                            <a shiro:hasPermission="customer:info"  class="btn btn-default" role="button" th:href="@{/customer/info}">信息查询</a>
+                            <a shiro:hasPermission="customer:paylog" th:href="@{/customer/paylog}" class="btn btn-default" role="button">充值记录</a>
+                            <a  shiro:hasPermission="cusomer:toUpdatePwd" th:href="@{/cusomer/toUpdatePwd}" class="btn btn-default" role="button">修改密码</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+
+            <div class="col-sm-6 col-md-4" style="background-color: aliceblue">
+                <div class="thumbnail" style="background-color: aliceblue">
+                    <img src="../img/info/cart.jpg" alt="...">
+                    <div class="caption" style="align-content: center">
+                        <h3 >管理购物车</h3>
+
+                        <p>
+                            <a shiro:hasPermission="shop:shopList" th:href="@{/shop/shopList}"class="btn btn-default" role="button" >购物车</a>
+                            <a shiro:hasPermission="shop:buylog" th:href="@{/shop/buylog}" class="btn btn-default" role="button" >购买记录</a>
+                            <a shiro:hasPermission="shop:goodsList" th:href="@{/shop/goodsList}" class="btn btn-default" role="button" >当前订单</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="row" style="background-color: aliceblue">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail" style="background-color: aliceblue">
+                <img src="../img/info/money.jpg" alt="...">
+                <div class="caption" style="align-content: center">
+                    <h3 >钱包管理</h3>
+                    <p>
+                        <a shiro:hasPermission="customer:wallet" th:href="@{/customer/wallet}" class="btn btn-default" role="button">余额查询</a>
+                        <a shiro:hasPermission="customer:torecharge" th:href="@{/customer/torecharge}" class="btn btn-default" role="button">充值</a>
+                        <a  shiro:hasPermission="shop:buylog" th:href="@{/customer/paylog}" class="btn btn-default" role="button">充值记录</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail" style="background-color: aliceblue">
+                <img src="../img/info/address.jpg" alt="...">
+                <div class="caption" style="align-content: center">
+                    <h3 >地址管理</h3>
+                    <p>
+                        <a shiro:hasPermission="customer:address" th:href="@{/customer/address}" class="btn btn-default" role="button">收货地址</a>
+
+                        <a shiro:hasPermission="customer:toAddAddress" th:href="@{/customer/toAddAddress}" class="btn btn-default" role="button">新增地址</a>
+                        <a shiro:hasPermission="shop:status" th:href="@{/shop/status}" class="btn btn-default">订单状态</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>

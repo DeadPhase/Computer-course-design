@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>评论</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body style="background-color: aliceblue">
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <small>评论----------对购买的书籍进行评论</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <form th:action="@{/book/submitcomment}" method="post">
+
+        <div class="form-group">
+            <label >书号</label>
+            <input th:value="${books.getBookId()}" th:name="bookId"  class="form-control"   required>
+        </div>
+
+        <div class="form-group">
+            <label >书名</label>
+            <p th:text="${books.getBookName()}" class="form-control"   required>
+        </div>
+
+        <div class="form-group">
+            <label >作者</label>
+            <p th:text="${books.getBookAuthor()}" class="form-control"  required>
+        </div>
+
+        <div class="form-group" >
+            <label >商品评价</label>
+            <input   th:name="comment" class="form-control" >
+        </div>
+
+        <div class="col-md-2">
+            <a class="btn btn-default form-control" th:href="@{/book/bookList}" >返回</a>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-default form-control" >提交评论</button>
+        </div>
+
+    </form>
+
+
+</div>
+</body>
+</html>

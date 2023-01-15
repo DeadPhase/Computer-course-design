@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.thymeleaf.org/thymeleaf-extras-shiro" >
+<head>
+    <meta charset="UTF-8">
+    <title>购买的商品</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color: aliceblue">
+
+
+<div class="container" style="background-color: aliceblue">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <small>购物商品列表----------显示当前购物车商品</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row ">
+
+        <div class="col-md-1" >
+            <a class="btn btn-primary" th:href="@{/customer/address}">请选择收货地址</a>
+        </div>
+
+    </div>
+
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+                    <!--                    <th>书籍编号</th>-->
+                    <th>书籍名称</th>
+                    <th>书籍作者</th>
+                    <th>书籍价格</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--查询书籍处理-->
+                <tbody>
+                <tr th:each="goods:${shopList}">
+                    <!--                    <td  th:text="${book.getBookId()}">编号</td>-->
+                    <td th:text="${goods.getBookName()}">书名</td>
+                    <td th:text="${goods.getCount()}">数量</td>
+                    <td th:text="${goods.getPrice()}">价格</td>
+
+<!--                    <td>-->
+<!--                        <a shiro:hasPermission="shop:buybook"  th:href="@{/shop/addshop(bookId=${book.getBookId()})}" >加入购物车</a>-->
+<!--                    </td>-->
+
+
+                </tr>
+                </tbody>
+            </table>
+            <div class="col-md-6">
+                <a class="btn btn-primary" th:href="@{/customer/toCustomerIndex}">返回首页</a>
+                <a class="btn btn-primary" th:href="@{/shop/shopList}">继续添加商品</a>
+                <a class="btn btn-primary" th:href="@{/shop/cancleOrder(usId=${userlist11.getUsId()})}">取消订单</a>
+
+                <a class="btn btn-primary" th:href="@{/shop/tobuyBook}">提交订单</a>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+
+

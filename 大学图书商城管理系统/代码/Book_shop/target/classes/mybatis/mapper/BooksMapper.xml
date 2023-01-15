@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.zheng.mapper.BooksMapper">
+
+    <select id="lookscId" resultType="com.example.zheng.pojo.Shop_list_buylog">
+        select s.slbId,s.slId,s.bgId from buglog b,shop_list_buylog s
+         where s.bgId = b.bgId and b.bgId = #{bgId}
+    </select>
+
+    <insert id="addListBuyLog" parameterType="com.example.zheng.pojo.Shop_list_buylog">
+        insert into shop_list_buylog(slbId,slId,bgId)
+        values(#{slbId},#{slId},#{bgId})
+    </insert>
+<!--    先找出要评论的书籍主键-->
+    <select id="lookBookId" resultType="com.example.zheng.pojo.Books">
+     select s.bookId,s.bookName,s.bookAuthor,s.price from bookss s,book_cart_relation b
+         where s.bookId=b.booKId and b.scId =#{scId}
+    </select>
+<!--    购物车和书籍联合-->
+    <insert id="addBookCart" parameterType="com.example.zheng.pojo.Book_cart_relation">
+        insert into book_cart_relation(bcrId,bookId,scId)
+        values (#{bcrId},#{bookId},#{scId})
+    </insert>
+
+
+    <select id="queryBookListKind" parameterType="com.example.zheng.pojo.Books" resultType="com.example.zheng.pojo.Books">
+        select * from bookss,bkb
+        <where>
+            bookss.bookId=bkb.bookId
+            <if test="bkId != null and bkId !=''">
+                And bkId =#{bkId}
+            </if>
+
+            <if test="bookName != null and bookName != ''">
+                And bookName =#{bookName}
+            </if>
+            <if test="bookAuthor != null and bookAuthor != ''">
+                And bookAuthor =#{bookAuthor}
+            </if>
+            <if test="address != null and address !=''">
+                And address =#{address}
+            </if>
+
+            <if test="minPrice !=null and minPrice !=''">
+                And price > #{minPrice}
+                <if test="maxPrice !=null and maxPrice !=''">
+                    And price &lt; #{maxPrice}
+                </if>
+            </if>
+
+        </where>
+    </select>
+
+
+    <select id="queryBookList" parameterType="com.example.zheng.pojo.Books" resultType="com.example.zheng.pojo.Books">
+        select * from bookss
+        <where>
+             1=1
+        <if test="bookName != null and bookName != ''">
+            And bookName =#{bookName}
+        </if>
+        <if test="bookAuthor != null and bookAuthor != ''">
+            And bookAuthor =#{bookAuthor}
+        </if>
+        <if test="address != null and address !=''">
+            And address =#{address}
+        </if>
+
+        <if test="minPrice !=null and minPrice !=''">
+            And price > #{minPrice}
+            <if test="maxPrice !=null and maxPrice !=''">
+                And price &lt; #{maxPrice}
+            </if>
+        </if>
+
+        </where>
+    </select>
+
+
+
+
+    <select id="queryBookById" resultType="com.example.zheng.pojo.Books">
+        select * from bookss where bookId=#{bookId}
+    </select>
+
+<!--    添加书籍的信息-->
+    <insert id="addBook" parameterType="com.example.zheng.pojo.Books">
+        insert into bookss(bookId,bookName,bookAuthor,price,address,impression,introduce)
+        values (#{bookId},#{bookName},#{bookAuthor},#{price},#{address},#{impression},#{introduce})
+
+    </insert>
+
+<!--    书籍种类和书籍信息关联表中插入数据-->
+    <insert id="addBookRelation" parameterType="com.example.zheng.pojo.Bkb">
+        insert into bkb (bbId,bkId,bookId) values (#{bbId},#{bkId},#{bookId})
+    </insert>
+
+<!--    根据书籍主键查询书籍的评论-->
+    <select id="queryCommentList" resultType="com.example.zheng.pojo.Comment">
+        select * from comment where bookId =#{bookId} order by times desc
+    </select>
+
+<!--    增加书籍的评论-->
+    <insert id="addBookComment" parameterType="com.example.zheng.pojo.Comment">
+        insert into comment(cId,discuss,usercount,bookId,times)
+        values (#{cId},#{discuss},#{usercount},#{bookId},#{times})
+    </insert>
+
+</mapper>

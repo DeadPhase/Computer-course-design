@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>地址</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body style="background-color: aliceblue">
+
+
+<div class="container">
+
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <small>地址----------地址栏信息</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+                    <!--                    <th>书籍编号</th>-->
+                    <th>姓名</th>
+                    <th>地址</th>
+                    <th>电话号码</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--查询书籍处理-->
+                <tbody>
+                <tr th:each="address:${addressList}">
+                    <!--                    <td  th:text="${book.getBookId()}">编号</td>-->
+                    <td th:text="${address.getName()}">姓名</td>
+                    <td th:text="${address.getAddress()}">地址</td>
+                    <td th:text="${address.getTel()}">电话号码</td>
+                    <td><a  th:href="@{/customer/toupdateAddress(haId=${address.getHaId()})}" >修改</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a  th:href="@{/customer/deleteAddress(haId=${address.getHaId()})}" >删除</a>  &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a  th:href="@{/shop/chooseAddress(haId=${address.getHaId()})}" >选择为收货地址</a>  &nbsp;&nbsp;|&nbsp;&nbsp;
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="col-md-2">
+                <a class="btn btn-primary" th:href="@{/customer/toAddAddress}">添加地址</a>
+            </div>
+            <div class="col-md-2">
+                <a class="btn btn-primary" th:href="@{/customer/toIndexCustomer}">返回</a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+    </div>
+
+</div>
+</body>
+</html>
+
+
+

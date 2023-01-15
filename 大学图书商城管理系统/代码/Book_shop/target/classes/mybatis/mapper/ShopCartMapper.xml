@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.zheng.mapper.ShopCartMapper">
+
+<!--    查询当前购物车是否已经有该商品-->
+    <select id="queryShopListById" resultType="com.example.zheng.pojo.Shoplist">
+        select * from shoplist where slId=#{slId} and is_buy = 0
+    </select>
+
+    <select id="getOrderAddress" resultType="com.example.zheng.pojo.Hvaddress">
+        select h.haId,h.name,h.address,h.tel,h.usercount from order_address o,hvaddress h
+        where o.haId=h.haId and usId =#{usId}
+    </select>
+
+<!--    将订单和地址建立关系-->
+    <insert id="addOrderAddress" parameterType="com.example.zheng.pojo.Order_address">
+        insert into order_address (oaId,usId,haId)
+        values (#{oaId},#{usId},#{haId})
+    </insert>
+
+<!--    首先查询出要删除的id-->
+    <select id="userShopRelation" resultType="com.example.zheng.pojo.UserShopRelation">
+        select * from user_shop_relation  where slId in(
+    select s.slId from (
+                           (
+                               select s.slId from user_shop_relation u,shoplist s
+                               where u.slId=s.slId and usercount='xio' and is_buy=0
+                           )
+                       )s
+);
+    </select>
+
+<!--    删除购物车和临时表联合表-->
+    <delete id="deleteUSR">
+        delete from user_shop_relation where usrId =#{usrId}
+    </delete>
+<!--    删除临时表-->
+<delete id="deleteList">
+    delete from shoplist where slId in(
+    select s.slId from (
+        (
+        select s.slId from user_shop_relation u,shoplist s
+        where u.slId=s.slId and usercount=#{usercount} and is_buy=0
+        )
+        )s
+    );
+</delete>
+<!--    //删除订单-->
+    <delete id="cancleBuyOrder">
+        delete from user_shop_list where usId=#{usId}
+    </delete>
+
+<!--    添加购买的日志记录-->
+    <insert id="addBuyLog" parameterType="com.example.zheng.pojo.Buglog">
+        insert into buglog (bgId,bookName,count,price,usId)
+        values (#{bgId},#{bookName},#{count},#{price},#{usId})
+    </insert>
+
+    <!--查询历史购买记录-->
+    <select id="queryUserShopListBy" resultType="com.example.zheng.pojo.UserShopList">
+        select * from user_shop_list where usercount =#{usercount} order by is_time desc
+    </select>
+
+<!--    查看某一个购物单的详细信息-->
+    <select id="buylogDetail" resultType="com.example.zheng.pojo.Buglog">
+        select * from buglog b ,user_shop_list u
+where u.usId= b.usId and usercount=#{usercount} and  u.usId =#{usId}
+    </select>
+
+<!--     查询某一个用户的购物车-->
+    <select id="queryShopCartList" resultType="com.example.zheng.pojo.ShopCart">
+        select * from shopcart where usercount =#{usercount} and is_buyshop = 0
+    </select>
+
+<!--    查询当前购物车里某一个商品的具体信息-->
+    <select id="shopById" resultType="com.example.zheng.pojo.ShopCart">
+        select * from shopcart where scId=#{scId}
+    </select>
+
+    <select id="queryShopByOption" parameterType="com.example.zheng.pojo.ShopCart" resultType="com.example.zheng.pojo.ShopCart">
+        select * from shopcart
+        <where>
+            1=1 and is_buyshop = 0
+            <if test="usercount != null and usercount !=''">
+                And usercount =#{usercount}
+            </if>
+            <if test="bookName != null and bookName != ''" >
+                And bookName=#{bookName}
+            </if>
+            <if test="store !=null and store !=''">
+                And store =#{store}
+            </if>
+
+        </where>
+    </select>
+
+<!--                添加商品到购物车-->
+    <insert id="addShop" parameterType="com.example.zheng.pojo.ShopCart">
+        insert into shopcart (scId,usercount,bookName,count,price,store,is_buyshop)
+         values (#{scId},#{usercount},#{bookName},#{count},#{price},#{store},#{is_buyshop})
+    </insert>
+
+<!--    删除购物车里的商品-->
+    <delete id="deleteShop" >
+        delete from shopcart where scId=#{scId}
+    </delete>
+
+<!--    修改商品的数量-->
+    <update id="updateShop" parameterType="com.example.zheng.pojo.ShopCart">
+        update shopcart set count =#{count} where scId=#{scId}
+    </update>
+
+
+<!--    ===================================购买商品================================-->
+
+<!--    增加一个临时购物清单-->
+    <insert id="addUserShopList" parameterType="com.example.zheng.pojo.UserShopList">
+        insert into user_shop_list (usId,usercount,is_status,is_time,is_pay,is_fahuo,is_gain,is_comment,is_all)
+        values (#{usId},#{usercount},#{is_status},#{is_time},#{is_pay},#{is_fahuo},#{is_gain},#{is_comment},#{is_all})
+    </insert>
+
+<!--    便利临时订单表、判断是否需要新建订单表-->
+    <select id="queryUserShopList" resultType="com.example.zheng.pojo.UserShopList">
+        select * from user_shop_list where usercount=#{usercount} and is_status=0
+    </select>
+
+<!--    将所需要的商品暂时放入临时商品表中-->
+    <insert id="addShopList" parameterType="com.example.zheng.pojo.Shoplist">
+        insert into shopList (slId,bookName,count,price,is_buy)
+        values(#{slId},#{bookName},#{count},#{price},#{is_buy})
+    </insert>
+
+
+    <!--购物清单和商品关联表-->
+    <insert id="addUserShopRelation" parameterType="com.example.zheng.pojo.UserShopRelation">
+        insert into user_shop_relation (usrId,usercount,slId)
+        values (#{usrId},#{usercount},#{slId})
+    </insert>
+
+<!--    购物车和购物清单关联表-->
+    <insert id="addShopCartList" parameterType="com.example.zheng.pojo.ShopCartList">
+        insert into shop_cart_list(csId,slId,scId)
+        values (#{csId},#{slId},#{scId})
+    </insert>
+
+<!--    首先遍历出哪些购物车中的商品已经被购买-->
+    <select id="querySomeBook" resultType="com.example.zheng.pojo.Shoplist">
+      select * from user_shop_relation usr,shoplist s
+       where usr.slId = s.slId and s.is_buy =0 and usr.usercount =#{usercount}
+
+    </select>
+
+<!--    修改购物车中商品的状态-->
+<!--    <update id="updateShopCart">-->
+<!--        update shopcart set is_buyshop =1 where scId=#{scId}-->
+<!--    </update>-->
+    <delete id="updateShopCart">
+        delete from  shopcart where scId=#{scId}
+    </delete>
+
+    <!--修改购物车中商品的状态改为已经购买-->
+    <update id="updateShopList">
+        update shoplist set is_buy =1 where slId =#{slId}
+    </update>
+    <!--直接清空-->
+<!--    <delete id="updateShopList">-->
+<!--        delete  from shoplist  where slId =#{slId}-->
+<!--    </delete>-->
+
+
+<!--    修改订单的状态-->
+    <update id="updateUserShopList">
+        update user_shop_list set is_status =1 where usercount =#{usercount}
+    </update>
+
+<!--    修改购买的状态-->
+    <update id="updatePay">
+         update user_shop_list set is_pay =1 where usercount =#{usercount}
+    </update>
+
+<!--    修改发货的状态-->
+    <update id="updateFahuo">
+        update user_shop_list set is_fahuo =1 where usercount =#{usercount} and usId=#{usId}
+    </update>
+
+<!--    修改收货的状态-->
+    <update id="updateGain">
+         update user_shop_list set is_gain =1 where usercount =#{usercount} and usId=#{usId}
+    </update>
+
+<!--    修改商品品论的状态-->
+    <update id="updateComment">
+        update user_shop_list set is_gain =1 where usercount =#{usercount} and usId=#{usId}
+    </update>
+
+    <!--将当前订单的商品显示在前台-->
+    <select id="shopList" resultType="com.example.zheng.pojo.Shoplist">
+        SELECT s.slId, s.bookName,s.count,s.price
+        FROM shoplist s, user_shop_relation usr,USER_SHOP_LIST usl
+         where usr.usercount = usl.usercount and usr.slId=s.slId and usl.is_status = 0 and s.is_buy = 0 and usl.usercount=#{usercount}
+    </select>
+
+<!--    开始购买操作-->
+    <select id="buyShopList" resultType="com.example.zheng.pojo.Shoplist">
+        SELECT s.slId, s.bookName,s.count,s.price  FROM shoplist s, user_shop_relation usr
+        where  usr.slId=s.slId and s.is_buy = 0 and usr.usercount=#{usercount}
+    </select>
+
+    <select id="queryOrderAddress" resultType="com.example.zheng.pojo.Order_address">
+        select * from order_address where usId = #{usId}
+    </select>
+
+
+
+</mapper>

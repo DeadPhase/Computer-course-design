@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改商品信息</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--      引入js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body style="background-color: aliceblue">
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <small>编辑商品----------修改购物车中的商品信息</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <form action="/shop/updateShop" th:method="post">
+        <div class="form-group">
+            <input type="hidden" th:value="${shopcart.getScId()}" th:name="scId"  class="form-control"   >
+        </div>
+        <div class="form-group">
+            <label >书名</label>
+            <p th:text="${shopcart.getBookName()}" th:name="bookName"  class="form-control"   required>
+        </div>
+
+        <div class="form-group">
+            <label >价格</label>
+            <p th:text="${shopcart.getPrice()}" th:name="price" class="form-control"   required>
+        </div>
+
+        <div class="form-group">
+            <label >店铺</label>
+            <p th:text="${shopcart.getStore()}" th:name="store" class="form-control"  required>
+        </div>
+
+
+        <div class="form-group" >
+            <label >数量</label>
+        <input th:value="${shopcart.getCount()}" onblur="return checkCount()" id="count" th:name="count" class="form-control" >
+            <span id="tipCount" style="color: red"></span>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-2"> <button class="btn btn-primary" type="submit">提交</button>
+                <a class="btn btn-primary" th:href="@{/customer/toCustomerIndex}">返回</a>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+<script type="text/javascript">
+    var patt1 = /^[-\\+]?([0-9]+\\.?)?[0-9]+$/;//正则表达式验证是否为纯数字
+    function checkCount() {
+        var count =$("#count").val();
+        if(count == '' && count == null){
+            $("#tipCount").text("数量不能为空");
+            return false;
+        }else if(count < 0 || count >100){
+            $("#tipCount").text("请输入正确的数量范围0-100");
+            return false;
+        }else if(count.match(patt1)==null){
+            $("#tipCount").text("请输入正确的书籍数量");
+            return false;
+        }
+        else{
+            $("#tipCount").text("");
+        }
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--      引入js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>欢迎登录图书管理系统</title>
+</head>
+
+<body style="background-color: aliceblue">
+
+<div class="container" style=" width:1200px;margin-left:550px;margin-top: 150px" >
+
+    <div class="row clearfix" style="align-content: center">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <small>购买的商品已经存在在购车中、请选择其它要购买的商品</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+
+    <form th:action="@{/login}" th:method="post">
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+                <a class="btn btn-default" th:href="@{/customer/toCustomerIndex}" >主页</a>
+            </div>
+            <div class="col-md-1">
+                <a class="btn btn-default" th:href="@{/shop/goodsList}" >返回购物单</a>
+            </div>
+        </div>
+
+
+    </form>
+
+
+
+
+</div>
+
+
+</body>
+</html>

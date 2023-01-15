@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.thymeleaf.org/thymeleaf-extras-shiro" >
+<head>
+    <meta charset="UTF-8">
+    <title>书籍列表</title>
+    <title>书籍展示页面</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color: aliceblue">
+
+
+<div class="container">
+
+    <!--导航栏部分-->
+    <nav class="navbar navbar-inverse" style="background-color: aliceblue">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">书籍商城</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a th:href="@{/customer/toCustomerIndex}">个人信息</a>
+                    </li>
+                    <li>
+                        <a shiro:hasPermission="shop:shopList" th:href="@{/shop/shopList}">购物车</a>
+
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >书籍种类 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li >
+                                <a th:href="@{/book/bookListKind(bbId='BK002')}" >IT类</a>
+                            </li>
+                            <li >
+                                <a th:href="@{/book/bookListKind(bbId='BK001')}">科幻类</a>
+                            </li>
+                            <li >
+                                <a th:href="@{/book/bookListKind(bbId='BK003')}">文学类</a>
+                            </li>
+                            <li >
+                                <a th:href="@{/book/bookListKind(bbId='BK004')}">艺术类</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <hr>
+
+    <div class="row ">
+        <form  th:action="@{/book/bookList}" style="float: left">
+
+            <div class="col-md-2">
+                <input type="text" name="queryBookName" class="form-control" placeholder="书籍名">
+            </div>
+            <div class="col-md-2" >
+                <input type="text" name="queryBookAuthor" class="form-control" placeholder="作者名">
+            </div>
+            <div class="col-md-2" >
+                <input type="text" name="queryBookAddress" class="form-control" placeholder="出版社">
+            </div>
+
+                <div class="col-md-4" >
+                    <div class="col-row">
+                        <div class="col-md-5">
+                            <input type="text" name="minPrice" class="form-control" placeholder="最低价格">
+                        </div>
+                           <div class="col-md-1">
+                               <span><strong>:</strong></span>
+                           </div>
+                        <div class="col-md-5">
+                            <input type="text" name="maxPrice" class="form-control" placeholder="最高价格">
+                        </div>
+                    </div>
+
+                </div>
+            <input type="submit" value="查询" class="btn btn-primary">
+        </form>
+
+    </div>
+<hr>
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+<!--                    <th>书籍编号</th>-->
+                    <th>书籍名称</th>
+                    <th>书籍作者</th>
+                    <th>书籍价格</th>
+                    <th>书籍出版社</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--查询书籍处理-->
+                <tbody>
+                <tr th:each="book:${bookList}">
+<!--                    <td  th:text="${book.getBookId()}">编号</td>-->
+                    <td th:text="${book.getBookName()}">书名</td>
+                    <td th:text="${book.getBookAuthor()}">作者</td>
+                    <td th:text="${book.getPrice()}"></td>
+                    <td th:text="${book.getAddress()}">出版社</td>
+                    <td><a  th:href="@{/book/todetail(bookId=${book.getBookId()})}" >详情</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a  th:href="@{/book/toComment(bookId=${book.getBookId()})}" >评论</a>  &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a shiro:hasPermission="shop:buybook"  th:href="@{/shop/addshop(bookId=${book.getBookId()})}" >加入购物车</a>
+
+                    </td>
+
+
+                </tr>
+                </tbody>
+            </table>
+            <div class="col-md-3">
+                <a class="btn btn-primary" th:href="@{/book/bookList}">返回查询首页</a>
+            </div>
+            <div class="col-md-5">
+                <p ><strong>当前</strong> <span th:text="${pageInfo.pageNum}"></span><strong> 页,总 </strong><span th:text="${pageInfo.pages}"></span><strong> 页,共</strong> <span th:text="${pageInfo.total}"></span><strong> 条记录</strong></p>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a class="btn btn-primary" th:href="@{/book/bookList}">首页</a>
+                        <a class="btn btn-primary" th:href="@{/book/bookList(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a>
+                        <a class="btn btn-primary" th:href="@{/book/bookList(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a>
+                        <a class="btn btn-primary" th:href="@{/book/bookList(pageNum=${pageInfo.pages})}">尾页</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+
+

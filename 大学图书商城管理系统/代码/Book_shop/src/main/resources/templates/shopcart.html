@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body style="background-color: aliceblue">
+
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <small>购物车商品----------显示所有购物车商品</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row ">
+        <form  th:action="@{/shop/shopList}" style="float: left">
+
+            <div class="col-md-3">
+                <input type="text" name="queryBookName" class="form-control" placeholder="书籍名">
+            </div>
+            <div class="col-md-3" >
+                <input type="text" name="queryBookStore" class="form-control" placeholder="店铺">
+            </div>
+
+            <input type="submit" value="查询" class="btn btn-primary">
+        </form>
+
+    </div>
+
+    <hr>
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>书名</th>
+                    <th>价格</th>
+                    <th>数量</th>
+                    <th>店铺</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--查询商品处理-->
+                <tbody>
+                <tr th:each="shop:${shopList}">
+                    <!--                    <td  th:text="${book.getBookId()}">编号</td>-->
+                    <td th:text="${shop.getBookName()}">书名</td>
+                    <td th:text="${shop.getPrice()}">价格</td>
+                    <td th:text="${shop.getCount()}">数量</td>
+                    <td th:text="${shop.getStore()}">店铺</td>
+                    <td><a th:href="@{/shop/tobuy(scId=${shop.getScId()})}">购买</a>&nbsp;|&nbsp;<a  th:href="@{/shop/deleteShop(scId=${shop.getScId()})}" >删除</a>&nbsp;|&nbsp;
+                    <a th:href="@{/shop/toUpdate(scId=${shop.getScId()})}">编辑</a>
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+            <div class="col-md-3">
+                <a class="btn btn-primary" th:href="@{/book/bookList}">添加新商品</a>
+                <a class="btn btn-primary" th:href="@{/customer/toIndexCustomer}">返回</a>
+            </div>
+            <div class="col-md-5">
+                <p ><strong>当前</strong> <span th:text="${pageInfo.pageNum}"></span><strong> 页,总 </strong><span th:text="${pageInfo.pages}"></span><strong> 页,共</strong> <span th:text="${pageInfo.total}"></span><strong> 条记录</strong></p>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a class="btn btn-primary" th:href="@{/customer/toCustomerIndex}">返回首页</a>
+                        <a class="btn btn-primary" th:href="@{/shop/shopList(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a>
+                        <a class="btn btn-primary" th:href="@{/shop/shopList(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a>
+                        <a class="btn btn-primary" th:href="@{/shop/shopList(pageNum=${pageInfo.pages})}">尾页</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+
+

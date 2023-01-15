@@ -1,0 +1,1511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="427349e6-37f0-45ec-8c0c-c0af1dd7023c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ssmbuild: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ssmbuild: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="comment: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ssmbuild@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="spring_boot" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/controller/BooksController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/CustomerService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/RoleMapper.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ShopCartMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/controller/ShopCartController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="270" column="37" lean-forward="true" selection-start-line="270" selection-start-column="37" selection-end-line="270" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/mapper/ShopCartMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/config/ShiroConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/CustomerRole.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/BooksMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/config/MyMvcConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>queryUserShopListBy</find>
+      <find>buylogList</find>
+      <find>goods</find>
+      <find>paylog</find>
+      <find>pa</find>
+      <find>addshop</find>
+      <find>buylogDetail</find>
+      <find>book</find>
+      <find>lookBookId</find>
+      <find>queryCommentList</find>
+      <find>delete</find>
+      <find>updateShopList</find>
+      <find>can</find>
+      <find>userShopList1</find>
+      <find>address</find>
+      <find>buylog</find>
+      <find>shopList</find>
+      <find>addCustomer</find>
+      <find>register</find>
+      <find>wallet</find>
+      <find>addShopList</find>
+      <find>queryUserShopList</find>
+      <find>tobuyBook</find>
+      <find>toComment</find>
+      <find>submitcommentsubmitcomment</find>
+      <find>submitcomment</find>
+      <find>buylogdetail</find>
+      <find>addUserShopList</find>
+      <find>login</find>
+      <find>queryCustomer</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ec8a5590-c893-40bd-bc00-98131d9387fb/console_19.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ec8a5590-c893-40bd-bc00-98131d9387fb/console_20.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/Shoplist.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/list_of_goods.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/address.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/Order_address.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ec8a5590-c893-40bd-bc00-98131d9387fb/console_21.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/orderAddress.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/buylog.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/controller/TestBounce.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/CustomerRole.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/userRegister.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/mapper/CustomerMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/service/CustomerService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/CustomerMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/example/zheng/DemoApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/controller/AutoFinish.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ec8a5590-c893-40bd-bc00-98131d9387fb/console_22.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ec8a5590-c893-40bd-bc00-98131d9387fb/console_23.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ec8a5590-c893-40bd-bc00-98131d9387fb/console_24.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/alreayBuy.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/customerIndex.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/allBook.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/mapper/ShopCartMapper.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ec8a5590-c893-40bd-bc00-98131d9387fb/console_25.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/addOrderAddress.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/UserShopList.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ShopCartMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/config/UserRealm.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/Mylog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/mapper/SysLogMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/service/SysLogService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/SysLogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/Syslog.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysLogMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/SysLogAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/controller/BooksController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/controller/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/controller/ShopCartController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/BooksServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/RoleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/ShopCartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/zheng/service/ShopCartService.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="E:\work\maven\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="demo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="demo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1255" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectId" id="2KMwPvZ91m4UQ2ooNikW4o9FGo1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="spring_boot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring_boot" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="spring_boot" type="58d84e3e:PackageViewProjectNode" />
+              <item name="demo" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="spring_boot" type="58d84e3e:PackageViewProjectNode" />
+              <item name="demo" type="616d4139:PackageViewModuleNode" />
+              <item name="com.example.zheng" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\user\workspace\spring_boot\src\main\resources\static\img\info" />
+      <recent name="F:\user\workspace\spring_boot\src\main\resources\static\img\literature" />
+      <recent name="F:\user\workspace\spring_boot\src\main\resources\static\img\it" />
+      <recent name="F:\user\workspace\spring_boot\src\main\resources\static\img\science" />
+      <recent name="F:\user\workspace\spring_boot\src\main\resources\static\img" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.zheng.pojo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\user\workspace\spring_boot\src\main\resources\static" />
+      <recent name="F:\user\workspace\spring_boot\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DemoApplication (1)">
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="spring_boot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zheng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.zheng" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zheng.DemoApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zheng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.zheng" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zheng.DemoApplicationTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplicationTests.testLookBookId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zheng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.zheng" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zheng.DemoApplicationTests" />
+      <option name="METHOD_NAME" value="testLookBookId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplicationTests.testLookBuy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zheng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.zheng" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zheng.DemoApplicationTests" />
+      <option name="METHOD_NAME" value="testLookBuy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zheng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.zheng.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring_boot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.zheng.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.DemoApplicationTests.testLookBookId" />
+      <item itemvalue="JUnit.DemoApplicationTests.testLookBuy" />
+      <item itemvalue="JUnit.DemoApplicationTests.test" />
+      <item itemvalue="Spring Boot.DemoApplication" />
+      <item itemvalue="Spring Boot.DemoApplication (1)" />
+      <item itemvalue="JUnit.DemoApplicationTests" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.DemoApplication (1)" />
+        <item itemvalue="JUnit.DemoApplicationTests" />
+        <item itemvalue="JUnit.DemoApplicationTests.test" />
+        <item itemvalue="JUnit.DemoApplicationTests.testLookBookId" />
+        <item itemvalue="JUnit.DemoApplicationTests.testLookBuy" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="427349e6-37f0-45ec-8c0c-c0af1dd7023c" name="Default Changelist" comment="" />
+      <created>1634004351696</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634004351696</updated>
+      <workItem from="1634004354938" duration="1539000" />
+      <workItem from="1634006001323" duration="2320000" />
+      <workItem from="1634008408160" duration="205000" />
+      <workItem from="1634008640750" duration="1368000" />
+      <workItem from="1634010081017" duration="71000" />
+      <workItem from="1634019380103" duration="3505000" />
+      <workItem from="1634088852989" duration="9046000" />
+      <workItem from="1634101011630" duration="3446000" />
+      <workItem from="1634105148981" duration="10426000" />
+      <workItem from="1634171220264" duration="1969000" />
+      <workItem from="1634173263057" duration="1315000" />
+      <workItem from="1634174708525" duration="6663000" />
+      <workItem from="1634263192268" duration="15394000" />
+      <workItem from="1634480410215" duration="1249000" />
+      <workItem from="1634520082535" duration="633000" />
+      <workItem from="1634524193436" duration="5825000" />
+      <workItem from="1634548829184" duration="2774000" />
+      <workItem from="1634789117285" duration="429000" />
+      <workItem from="1634790602166" duration="1917000" />
+      <workItem from="1634793098443" duration="1250000" />
+      <workItem from="1634807135251" duration="2864000" />
+      <workItem from="1634863799562" duration="839000" />
+      <workItem from="1634876167504" duration="11326000" />
+      <workItem from="1634891378798" duration="1565000" />
+      <workItem from="1634949298211" duration="5272000" />
+      <workItem from="1634955171949" duration="9142000" />
+      <workItem from="1635123937216" duration="598000" />
+      <workItem from="1635145093806" duration="3266000" />
+      <workItem from="1635150152056" duration="302000" />
+      <workItem from="1635156052953" duration="676000" />
+      <workItem from="1635222084792" duration="3064000" />
+      <workItem from="1635243355309" duration="1954000" />
+      <workItem from="1635258760633" duration="3125000" />
+      <workItem from="1635308380649" duration="6524000" />
+      <workItem from="1635317525856" duration="31000" />
+      <workItem from="1635321828306" duration="6712000" />
+      <workItem from="1635383327127" duration="38000" />
+      <workItem from="1635396057638" duration="2444000" />
+      <workItem from="1635412741425" duration="2154000" />
+      <workItem from="1635468843719" duration="42000" />
+      <workItem from="1635475255849" duration="13145000" />
+      <workItem from="1635552767058" duration="9416000" />
+      <workItem from="1635576141136" duration="6877000" />
+      <workItem from="1635684575572" duration="3105000" />
+      <workItem from="1635728998863" duration="20000" />
+      <workItem from="1635736531203" duration="105000" />
+      <workItem from="1635736757863" duration="7256000" />
+      <workItem from="1635814602445" duration="9656000" />
+      <workItem from="1635833864491" duration="11000" />
+      <workItem from="1635845641141" duration="271000" />
+      <workItem from="1635924034202" duration="4482000" />
+      <workItem from="1635987732865" duration="185000" />
+      <workItem from="1635992989101" duration="2949000" />
+      <workItem from="1635999661752" duration="1515000" />
+      <workItem from="1636001189967" duration="7812000" />
+      <workItem from="1636073730187" duration="16241000" />
+      <workItem from="1636213614650" duration="1212000" />
+      <workItem from="1636245817124" duration="15705000" />
+      <workItem from="1636333411491" duration="34000" />
+      <workItem from="1636359144030" duration="6085000" />
+      <workItem from="1636433564613" duration="2646000" />
+      <workItem from="1636447954530" duration="3836000" />
+      <workItem from="1636505422776" duration="20755000" />
+      <workItem from="1636592411968" duration="1830000" />
+      <workItem from="1636598368026" duration="14377000" />
+      <workItem from="1636711043234" duration="288000" />
+      <workItem from="1636765363568" duration="22676000" />
+      <workItem from="1636938575793" duration="96000" />
+      <workItem from="1637033684256" duration="8725000" />
+      <workItem from="1637045754819" duration="5558000" />
+      <workItem from="1637055718760" duration="1128000" />
+      <workItem from="1637068459288" duration="6564000" />
+      <workItem from="1637075530968" duration="491000" />
+      <workItem from="1637110723215" duration="103000" />
+      <workItem from="1637124265781" duration="14484000" />
+      <workItem from="1637158318725" duration="2761000" />
+      <workItem from="1637161990696" duration="56000" />
+      <workItem from="1637289793276" duration="16532000" />
+      <workItem from="1637368237996" duration="33532000" />
+      <workItem from="1637543813561" duration="1513000" />
+      <workItem from="1637552399296" duration="740000" />
+      <workItem from="1637562340633" duration="841000" />
+      <workItem from="1637563204364" duration="12022000" />
+      <workItem from="1637633641624" duration="12936000" />
+      <workItem from="1637715608119" duration="9797000" />
+      <workItem from="1637802376259" duration="4226000" />
+      <workItem from="1637998144458" duration="10137000" />
+      <workItem from="1638015014269" duration="180000" />
+      <workItem from="1638080204274" duration="1167000" />
+      <workItem from="1638095015907" duration="751000" />
+      <workItem from="1638183017234" duration="598000" />
+      <workItem from="1638252443762" duration="1409000" />
+      <workItem from="1638345955614" duration="5072000" />
+      <workItem from="1638594836623" duration="12165000" />
+      <workItem from="1638689195773" duration="2268000" />
+      <workItem from="1638693503935" duration="424000" />
+      <workItem from="1638758724779" duration="4090000" />
+      <workItem from="1673797740666" duration="158000" />
+      <workItem from="1673797909159" duration="607000" />
+    </task>
+    <task id="LOCAL-00001" summary="创建一个springboot项目，并测试在controller跳转到指定页面，显示图片">
+      <created>1634006539829</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1634006539829</updated>
+    </task>
+    <task id="LOCAL-00002" summary="添加lambox和日志依赖">
+      <created>1634089731313</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1634089731313</updated>
+    </task>
+    <task id="LOCAL-00003" summary="添加spring-mybatis依赖。添加连接MySQL数据库操作，添加shiro,">
+      <created>1634116919146</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1634116919146</updated>
+    </task>
+    <task id="LOCAL-00004" summary="测试增、删、改、查顾客信息完成。">
+      <created>1634179595355</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1634179595355</updated>
+    </task>
+    <task id="LOCAL-00005" summary="shiro实现登录的拦截、实现用户认证、授权">
+      <created>1634303437592</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1634303437592</updated>
+    </task>
+    <task id="LOCAL-00006" summary="完成书籍信息的前台展示（sql语句的编写、dao层的编写、service的编写。以及前台实现，动态搜索图书信息还未完善)点击详情还未实现书籍信息的详细展示">
+      <created>1634809968155</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634809968155</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1、点击书籍详情会显示整个书籍的详细信息&#10;2、完成书籍的动态查询（根据图书的作者、出版社、书名）">
+      <created>1634888738863</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1634888738863</updated>
+    </task>
+    <task id="LOCAL-00008" summary="1、使用分页插件对查询的数据进行分页处理">
+      <created>1634892464933</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1634892464933</updated>
+    </task>
+    <task id="LOCAL-00009" summary="1、实现价格在给定的范围内查找图书&#10;2、调整美化书籍界面的布局">
+      <created>1634967327330</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1634967327330</updated>
+    </task>
+    <task id="LOCAL-00010" summary="购物车">
+      <created>1635156186988</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1635156186988</updated>
+    </task>
+    <task id="LOCAL-00011" summary="1、将书籍商品添加到购物车（未完全实现）&#10;实现了数据库的编写、代码的编写、前端页面的展示">
+      <created>1635261280584</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1635261280584</updated>
+    </task>
+    <task id="LOCAL-00012" summary="1、使用shiro简单实现了用户权限的设置。用户没有将商品加入购物车的权限、在进行购买商品的时候、会跳转到未授权页面。">
+      <created>1635315320560</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1635315320560</updated>
+    </task>
+    <task id="LOCAL-00013" summary="1、使用bootstrap简单制作了首页、以及登录后进入个人主页界面。实现了在个人主页界面进入书籍商城界面">
+      <created>1635327959622</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1635327959622</updated>
+    </task>
+    <task id="LOCAL-00014" summary="&#10;1、完成了用户、角色、权限的三表关联查询。在shiro中通过对当前用户的权限顾虑、给与用户不同的操作和页面展示">
+      <created>1635498913552</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1635498913552</updated>
+    </task>
+    <task id="LOCAL-00015" summary="&#10;1、完成了用户权限的认证、只有具有某种权限才能进行相应的操作。目前实现只是简单实现购物车的商品添加功能。">
+      <created>1635561194144</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1635561194144</updated>
+    </task>
+    <task id="LOCAL-00016" summary="&#10;&#10;1、完成了、根据当前登录用户来查询当前用户购物车所包含的商品。在购买商品的时候、根据当前用户账号、加入到该用户的购物车中">
+      <created>1635580569734</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1635580569734</updated>
+    </task>
+    <task id="LOCAL-00017" summary="&#10;1、完成了用户权限的查询、根据当前用户、在授权阶段。将用户权限读取、在进行接下来的操作、不同的权限具有不同的展示效果和不同的操作">
+      <created>1635924177953</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1635924177954</updated>
+    </task>
+    <task id="LOCAL-00018" summary="&#10;1、进一步改善用户权限的查询、以及认证及权限过滤。">
+      <created>1636010743243</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1636010743243</updated>
+    </task>
+    <task id="LOCAL-00019" summary="&#10;1、查看购买者对购买商品的评价">
+      <created>1636100389731</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1636100389731</updated>
+    </task>
+    <task id="LOCAL-00020" summary="1、完成用户信息的逻辑删除">
+      <created>1636245989051</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1636245989051</updated>
+    </task>
+    <task id="LOCAL-00021" summary="1、完成用户购物车中商品的查询-商铺和书名&#10;2、完成删除购物车中的商品&#10;3、修改商品的数量（只能修改数量）（还未进行数量的判断）&#10;4、完成将商品添加到购物车">
+      <created>1636269012884</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1636269012901</updated>
+    </task>
+    <task id="LOCAL-00022" summary="1、完成用户收货地址的增删改查、以及展示信息到前台&#10;  （增删改的逻辑代码以及sql的语句编写完成。前台操作还未完成）">
+      <created>1636451166429</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1636451166429</updated>
+    </task>
+    <task id="LOCAL-00023" summary="  1、完成地址增加操作、前台数据的收集&#10;  2、完成地址修改操作。前台页面的展示&#10;  3、完成地址删除操作。&#10;  还未对前台用户输入的数据进行验证">
+      <created>1636515265422</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1636515265422</updated>
+    </task>
+    <task id="LOCAL-00024" summary="1、完成了用户余额的查询&#10;2、完成用户余额的模拟充值&#10;3、完成了查询用户充值的记录">
+      <created>1636537131046</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1636537131046</updated>
+    </task>
+    <task id="LOCAL-00025" summary="1、添加书籍信息&#10;2、根据书籍类别查询数据">
+      <created>1636617207825</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1636617207825</updated>
+    </task>
+    <task id="LOCAL-00026" summary="1、简单实现了、一次性购买多个商品。">
+      <created>1636788513048</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1636788513048</updated>
+    </task>
+    <task id="LOCAL-00027" summary="1、基本完成订单购买、模拟支付">
+      <created>1636802978948</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1636802978948</updated>
+    </task>
+    <task id="LOCAL-00028" summary="1、修改页面展示、新增用户信息展示、密码修改">
+      <created>1637138982499</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1637138982499</updated>
+    </task>
+    <task id="LOCAL-00029" summary="1、解决了用户购买商品时的一个bug">
+      <created>1637160400148</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1637160400148</updated>
+    </task>
+    <task id="LOCAL-00030" summary="1、实现了用户查看历史的订单记录、根据订单查看该订单包含的具体商品信息">
+      <created>1637306464328</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1637306464329</updated>
+    </task>
+    <task id="LOCAL-00031" summary="1、基本实现模拟付款、通知商家发货、收货">
+      <created>1637379107794</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1637379107794</updated>
+    </task>
+    <task id="LOCAL-00032" summary="1、基本实现用户对购买的商品评价、对于一个订单多个商品的信息的评价基本实现">
+      <created>1637396776555</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1637396776555</updated>
+    </task>
+    <task id="LOCAL-00033" summary="1、改善书籍评论的信息">
+      <created>1637562418448</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1637562418448</updated>
+    </task>
+    <task id="LOCAL-00034" summary="1、完成了商品的取消购买操作">
+      <created>1637571838990</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1637571838990</updated>
+    </task>
+    <task id="LOCAL-00035" summary="1、实现了订单的收货地址。以及完成购买后查询某一个订单的收货地址">
+      <created>1637652734789</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1637652734789</updated>
+    </task>
+    <task id="LOCAL-00036" summary="1、新用户注册、自动生成一个钱包、角色授予">
+      <created>1637748003287</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1637748003291</updated>
+    </task>
+    <task id="LOCAL-00037" summary="1、修改了购买商品重复、提交订单前地址的填写">
+      <created>1638011816657</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1638011816657</updated>
+    </task>
+    <task id="LOCAL-00038" summary="1、使用aop切面编程实现用户操作的日志记录到数据库">
+      <created>1638601988229</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1638601988229</updated>
+    </task>
+    <task id="LOCAL-00039" summary="1、在springboot中添加注解实现事务管理">
+      <created>1638602722282</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1638602722282</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="DemoApplicationTests_test - 2021.11.25 at 11h 07m 50s.xml">
+      <configuration name="DemoApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTests_test - 2021.11.25 at 11h 09m 18s.xml">
+      <configuration name="DemoApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTests_test - 2021.11.25 at 11h 10m 02s.xml">
+      <configuration name="DemoApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTests_test - 2021.11.25 at 11h 11m 29s.xml">
+      <configuration name="DemoApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTests_test - 2021.11.25 at 11h 12m 10s.xml">
+      <configuration name="DemoApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTests_test - 2021.11.25 at 11h 13m 16s.xml">
+      <configuration name="DemoApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTests_test - 2021.11.25 at 11h 13m 56s.xml">
+      <configuration name="DemoApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTests_test - 2021.11.25 at 11h 14m 36s.xml">
+      <configuration name="DemoApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTests_test - 2021.11.25 at 11h 15m 30s.xml">
+      <configuration name="DemoApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTests_test - 2021.11.25 at 11h 16m 51s.xml">
+      <configuration name="DemoApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="476211000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.84398496" visible="true" weight="0.24396783" />
+      <window_info id="Structure" order="1" sideWeight="0.15601504" side_tool="true" visible="true" weight="0.24396783" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.16666667" side_tool="true" weight="0.1802949" />
+      <window_info id="Web" order="7" sideWeight="0.13474026" side_tool="true" weight="0.3264075" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.10906515" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.55697054" visible="true" weight="0.24645892" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.20963173" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49932975" weight="0.13456091" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.4430295" side_tool="true" weight="0.23937677" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.5339943" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="13" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.21246459" />
+      <window_info anchor="bottom" id="Database Console" order="15" sideWeight="0.5294906" weight="0.58640224" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.2935657" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="SciView" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Database" order="9" visible="true" weight="0.21782842" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7" visible="true" weight="0.26072386" />
+      <window_info id="Structure" order="1" sideWeight="0.3" side_tool="true" weight="0.230563" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.16666667" side_tool="true" weight="0.1802949" />
+      <window_info id="Web" order="7" sideWeight="0.13474026" side_tool="true" weight="0.3264075" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.10906515" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.55697054" weight="0.4022663" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.20963173" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49932975" weight="0.13456091" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.4430295" side_tool="true" weight="0.23937677" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.5339943" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="13" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.21246459" />
+      <window_info anchor="bottom" id="Database Console" order="15" sideWeight="0.5294906" weight="0.58640224" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.2935657" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="SciView" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Database" order="9" visible="true" weight="0.1997319" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&#10;&#10;1、完成了、根据当前登录用户来查询当前用户购物车所包含的商品。在购买商品的时候、根据当前用户账号、加入到该用户的购物车中" />
+    <MESSAGE value="&#10;1、完成了用户权限的查询、根据当前用户、在授权阶段。将用户权限读取、在进行接下来的操作、不同的权限具有不同的展示效果和不同的操作" />
+    <MESSAGE value="&#10;1、进一步改善用户权限的查询、以及认证及权限过滤。" />
+    <MESSAGE value="&#10;1、查看购买者对购买商品的评价" />
+    <MESSAGE value="1、完成用户信息的逻辑删除" />
+    <MESSAGE value="1、完成用户购物车中商品的查询-商铺和书名&#10;2、完成删除购物车中的商品&#10;3、修改商品的数量（只能修改数量）&#10;4、完成将商品添加到购物车" />
+    <MESSAGE value="1、完成用户购物车中商品的查询-商铺和书名&#10;2、完成删除购物车中的商品&#10;3、修改商品的数量（只能修改数量）（还未进行数量的判断）&#10;4、完成将商品添加到购物车" />
+    <MESSAGE value="1、完成用户收货地址的增删改查、以及展示信息到前台&#10;  （增删改的逻辑代码以及sql的语句编写完成。前台操作还未完成）" />
+    <MESSAGE value="  1、完成地址增加操作、前台数据的收集&#10;  2、完成地址修改操作。前台页面的展示&#10;  3、完成地址删除操作。&#10;  还未对前台用户输入的数据进行验证" />
+    <MESSAGE value="1、完成了用户余额的查询&#10;2、完成用户余额的模拟充值&#10;3、完成了查询用户充值的记录" />
+    <MESSAGE value="1、添加书籍信息&#10;2、根据书籍类别查询数据" />
+    <MESSAGE value="1、简单实现了、一次性购买多个商品。" />
+    <MESSAGE value="1、基本完成订单购买、模拟支付" />
+    <MESSAGE value="1、修改页面展示、新增用户信息展示、密码修改" />
+    <MESSAGE value="1、解决了用户购买商品时的一个bug" />
+    <MESSAGE value="1、实现了用户查看历史的订单记录、根据订单查看该订单包含的具体商品信息" />
+    <MESSAGE value="1、基本实现模拟付款、通知商家发货、收货" />
+    <MESSAGE value="1、基本实现用户对购买的商品评价、对于一个订单多个商品的信息的评价基本实现" />
+    <MESSAGE value="1、改善书籍评论的信息" />
+    <MESSAGE value="1、完成了商品的取消购买操作" />
+    <MESSAGE value="1、实现了订单的收货地址。以及完成购买后查询某一个订单的收货地址" />
+    <MESSAGE value="1、新用户注册、自动生成一个钱包、角色授予" />
+    <MESSAGE value="1、修改了购买商品重复、提交订单前地址的填写" />
+    <MESSAGE value="1、使用aop切面编程实现用户操作的日志记录到数据库" />
+    <MESSAGE value="1、在springboot中添加注解实现事务管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、在springboot中添加注解实现事务管理" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="scId" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>scId</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/ShopCartList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/UserShopList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/ShopCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userRegister.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1265">
+          <caret line="55" column="132" selection-start-line="55" selection-start-column="132" selection-end-line="55" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userLogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.1/shiro-core-1.4.1.jar!/org/apache/shiro/subject/Subject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/Shoplist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/AuthorityServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://ec8a5590-c893-40bd-bc00-98131d9387fb/schema/ssmbuild/table/buglog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="abbac36a-8c0c-418f-a19b-c8462332739b">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ec8a5590-c893-40bd-bc00-98131d9387fb/schema/ssmbuild/table/shop_list_buylog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="abbac36a-8c0c-418f-a19b-c8462332739b">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ec8a5590-c893-40bd-bc00-98131d9387fb/schema/ssmbuild/table/shopcart">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="abbac36a-8c0c-418f-a19b-c8462332739b">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ec8a5590-c893-40bd-bc00-98131d9387fb/schema/ssmbuild/table/shoplist">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="abbac36a-8c0c-418f-a19b-c8462332739b">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ec8a5590-c893-40bd-bc00-98131d9387fb/schema/ssmbuild/table/syslog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="abbac36a-8c0c-418f-a19b-c8462332739b">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ec8a5590-c893-40bd-bc00-98131d9387fb/schema/ssmbuild/table/user_shop_list">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="abbac36a-8c0c-418f-a19b-c8462332739b">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ec8a5590-c893-40bd-bc00-98131d9387fb/schema/ssmbuild/table/user_shop_relation">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="abbac36a-8c0c-418f-a19b-c8462332739b">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="131" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/SysLogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/mapper/SysLogMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/SysLogMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/BooksServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/RoleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/ShopCartServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/mapper/CustomerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/CustomerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/ShopCartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1863">
+          <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/Syslog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="25" selection-end-line="57" />
+          <folding>
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/controller/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7682">
+          <caret line="359" column="26" selection-start-line="359" selection-start-column="18" selection-end-line="359" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/BooksService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/mapper/BooksMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/SysLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1426">
+          <caret line="79" column="5" selection-start-line="33" selection-start-column="3" selection-end-line="79" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/Mylog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/config/UserRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="989">
+          <caret line="63" column="41" selection-start-line="44" selection-end-line="63" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/impl/SysLogServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/RoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/mapper/ShopCartMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/config/ShiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/pojo/CustomerRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/BooksMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/config/MyMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ShopCartMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/controller/BooksController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/zheng/controller/ShopCartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="270" column="37" lean-forward="true" selection-start-line="270" selection-start-column="37" selection-end-line="270" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring|spring_boot</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body style=" width:1200px;margin-left:500px;margin-top: 120px;background-color: aliceblue">
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <small>个人信息----------显示个人的详细信息</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <form action="" method="">
+
+        <div class="form-group">
+
+
+            <div class="form-group">
+                <div class="row" >
+                    <div class="col-md-1"><label >用户名 :</label></div>
+                    <div class="col-md-3">  <input type="text" th:value="${customerList.getUsercount()}"  class="form-control" ></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row" >
+                    <div class="col-md-1"><label >姓名 :</label></div>
+                    <div class="col-md-3">  <input type="text" th:value="${customerList.getName()}"  class="form-control" ></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row" >
+                    <div class="col-md-1"><label >密码 :</label></div>
+                    <div class="col-md-3">  <input type="text" th:value="${customerList.getPassword()}"  class="form-control" ></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row" >
+                    <div class="col-md-1"><label >性别 :</label></div>
+                    <div class="col-md-3">  <input type="text" th:value="${customerList.getSex()}"  class="form-control" ></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row" >
+                    <div class="col-md-1"><label >邮箱 :</label></div>
+                    <div class="col-md-3">  <input type="text" th:value="${customerList.getEmail()}"  class="form-control" ></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row" >
+                    <div class="col-md-1"><label >电话 :</label></div>
+                    <div class="col-md-3">  <input type="text" th:value="${customerList.getTel()}"  class="form-control" ></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row" >
+                    <div class="col-md-1"><label >地址 :</label></div>
+                    <div class="col-md-3">  <input type="text" th:value="${customerList.getAddress()}"  class="form-control" ></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-1"> <a class="btn btn-primary form-control" th:href="@{/customer/toCustomerIndex}" >返回</a></div>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+</body>
+</html>

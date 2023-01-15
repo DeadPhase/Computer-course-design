@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>书籍详细列表</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body style="background-color: aliceblue">
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+    <h1>
+        <small>书籍信息----------显示书籍的详细信息</small>
+    </h1>
+</div>
+</div>
+</div>
+
+    <form action="" method="">
+
+        <div class="form-group">
+            <label >书号</label>
+            <p th:text="${books.getBookId()}"  class="form-control"   required>
+        </div>
+
+        <div class="form-group">
+            <label >书名</label>
+            <p th:text="${books.getBookName()}" class="form-control"   required>
+        </div>
+
+        <div class="form-group">
+            <label >作者</label>
+            <p th:text="${books.getBookAuthor()}" class="form-control"  required>
+        </div>
+
+        <div class="form-group">
+            <label >出版社</label>
+            <p th:text="${books.getAddress()}" class="form-control"  required>
+        </div>
+
+        <div class="form-group">
+            <label >印次</label>
+            <p th:text="${books.getImpression()}" class="form-control"  required>
+        </div>
+
+        <div class="form-group">
+            <label >内容简介</label>
+            <p th:text="${books.getIntroduce()}" class="form-control"  required>
+        </div>
+
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1"> <a class="btn btn-default form-control" th:href="@{/book/bookList}" >返回</a></div>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+</body>
+</html>

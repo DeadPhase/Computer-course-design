@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>充值记录</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--      引入js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body style="background-color: aliceblue">
+
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <small>充值记录----------用户充值记录表</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>账户</th>
+                    <th>充值金额</th>
+                    <th>充值日期</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--查询商品处理-->
+                <tbody>
+                <tr th:each="paylog:${paylogList}">
+                    <!--                    <td  th:text="${book.getBookId()}">编号</td>-->
+                    <td th:text="${paylog.getUsercount()}">账户</td>
+                    <td th:text="${paylog.getMoney()}">金额</td>
+                    <td th:text="${paylog.getPay_time()}">充值日期</td>
+
+                    <td>
+<!--        <a class="btn btn-primary"  th:href="@{/customer/deletePaylog(pId=${paylog.getpId()})}" >删除</a>-->
+         <a class="btn btn-primary"  onclick="javascript:return p_del()" th:href="@{/customer/deletePaylog(pId=${paylog.getpId()})}" >删除</a>
+
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+            <div class="col-md-3">
+                <a class="btn btn-primary" th:href="@{/customer/torecharge}">充值</a>
+                <a class="btn btn-primary" th:href="@{/customer/toIndexCustomer}">返回</a>
+            </div>
+            <div class="col-md-5">
+                <p ><strong>当前</strong> <span th:text="${pageInfo.pageNum}"></span><strong> 页,总 </strong><span th:text="${pageInfo.pages}"></span><strong> 页,共</strong> <span th:text="${pageInfo.total}"></span><strong> 条记录</strong></p>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a class="btn btn-primary" th:href="@{/customer/paylog}">首页</a>
+                        <a class="btn btn-primary" th:href="@{/shop/shopList(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a>
+                        <a class="btn btn-primary" th:href="@{/shop/shopList(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a>
+                        <a class="btn btn-primary" th:href="@{/shop/shopList(pageNum=${pageInfo.pages})}">尾页</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script >
+
+    function p_del() {
+        var msg = "您真的确定要删除吗？";
+        if (confirm(msg)==true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+</script>
+</body>
+</html>
+
+
+

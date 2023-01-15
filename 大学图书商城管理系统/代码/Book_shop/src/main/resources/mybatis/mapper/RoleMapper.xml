@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.zheng.mapper.RoleMapper">
+
+    <select id="queryRole" resultType="com.example.zheng.pojo.Role">
+      select r.roleId
+      from  roles as r,customer as c,customer_r as cr
+      where cr.usercount=c.usercount and cr.roleId=r.roleId  and c.usercount=#{usercount}
+    </select>
+
+
+</mapper>

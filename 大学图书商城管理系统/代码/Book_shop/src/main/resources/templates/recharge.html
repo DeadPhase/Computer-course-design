@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>充值</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--      引入js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body style="background-color: aliceblue">
+
+<div class="container" style=" width:1200px;margin-left:500px;margin-top: 120px">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <small>充值----------用户充值金钱</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <form action="/customer/recharge" method="post">
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1"><label >请输入充值金额</label></div>
+                <div class="col-md-3"><input  onblur="return checkCount()" id="money" th:name="money" class="form-control" ></div>
+                <div class="col-md-3"><span id="tipMoney" style="color: red"></span></span></div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-1">
+                <button class="btn btn-primary" type="submit">提交</button>
+            </div>
+            <div class="col-md-1">
+                <a class="btn btn-primary" th:href="@{/customer/toIndexCustomer}">返回</a>
+            </div>
+        </div>
+
+    </form>
+
+
+</div>
+<script type="text/javascript">
+    var patt1 = /^[-\\+]?([0-9]+\\.?)?[0-9]+$/;//正则表达式验证是否为纯数字
+    function checkCount() {
+        var money =$("#money").val();
+        if(money == '' && money == null){
+            $("#tipMoney").text("充值的金额不能为空");
+            return false;
+        }else if(money < 0 || money >1000){
+            $("#tipMoney").text("请输入正确的金额范围0-1000");
+            return false;
+        }else if(money.match(patt1)==null){
+            $("#tipMoney").text("请输入正确的金额");
+            return false;
+        }
+        else{
+            $("#tipMoney").text("");
+        }
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

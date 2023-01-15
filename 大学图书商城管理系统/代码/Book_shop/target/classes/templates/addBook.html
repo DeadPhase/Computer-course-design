@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--      引入js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>用户注册</title>
+</head>
+
+<body style="background-color: aliceblue">
+
+<div class="container">
+
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <small>添加书籍</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <form th:action="@{/addbook}" >
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1" ><label for="bookName" >书籍名称 :</label> </div>
+                <div class="col-md-3"> <input type="text" placeholder="请输入书籍名称"   class="form-control col-md-6 " name="bookName" id="bookName"></div>
+                <!--                <div class="col-md-2"> <span id="tipCount" style="color: red"></span></div>-->
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1"><label for="bookAuthor">作者 :</label></div>
+                <div class="col-md-3">  <input type="text" placeholder="请输入作者"  class="form-control" name="bookAuthor" id="bookAuthor" ></div>
+                <!--                <div class="col-md-3"> <span id="tipName"  style="color: red"></span></div>-->
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1"><label for="price">价格 :</label></div>
+                <div class="col-md-3">  <input type="text" placeholder="请输入价格" class="form-control" name="price" id="price" ></div>
+                <!--                <div class="col-md-3"> <span id="tipPwd"  style="color: red"></span></div>-->
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1"><label for="address">出版社 :</label></div>
+                <div class="col-md-3">  <input type="text" placeholder="请再次出版社"  class="form-control" name="address" id="address" ></div>
+                <!--                <div class="col-md-3"> <span id="tipPwdpre"  style="color: red"></span></div>-->
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1"><label for="impression">版次 :</label></div>
+                <div class="col-md-3"> <input type="text" placeholder="请输入版次" class="form-control" name="impression" id="impression" ></div>
+                <!--                <div class="col-md-3"> <span id="tipSex"  style="color: red"></span></div>-->
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1"> <label for="detail">内容介绍:</label></div>
+                <div class="col-md-3"><input name="detail" placeholder="请输内容简介"  class="form-control"  id="detail"></input></div>
+<!--                <div class="col-md-3"> <span id="tipAge"  style="color: red"></span></div>-->
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1"> <label for="kind">书籍种类:</label></div>
+                <div class="col-md-3"><input name="kind" placeholder="请输入书籍种类" class="form-control"  id="kind"></input></div>
+                <!--                <div class="col-md-3"> <span id="tipAge"  style="color: red"></span></div>-->
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-1"> <button type="submit" class="btn btn-default form-control"  >添加</button></div>
+
+            </div>
+        </div>
+
+
+    </form>
+
+
+</div>
+
+
+
+</body>
+</html>

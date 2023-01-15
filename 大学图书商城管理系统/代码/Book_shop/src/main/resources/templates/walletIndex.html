@@ -1,0 +1,107 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>余额</title>-->
+<!--    &lt;!&ndash; 新 Bootstrap 核心 CSS 文件 &ndash;&gt;-->
+<!--    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!--</head>-->
+<!--<body style="background-color: aliceblue">-->
+<!--<div class="container">-->
+<!--    <div class="row clearfix">-->
+<!--        <div class="col-md-12 column">-->
+<!--            <div class="page-header">-->
+<!--                <h1>-->
+<!--                    <small>钱包余额&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;显示钱包的总金额</small>-->
+<!--                </h1>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <form action="" method="">-->
+
+<!--        <div class="form-group">-->
+<!--            <label >用户</label>-->
+<!--            <p th:text="${wallet.getUsercount()}" class="form-control"   required>-->
+<!--        </div>-->
+
+<!--        <div class="form-group">-->
+<!--            <label >剩余金额</label>-->
+<!--            <p th:text="${wallet.getBalance()}" class="form-control"  required>-->
+<!--        </div>-->
+
+
+<!--        <div class="form-group">-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-4">-->
+<!--                    <a class="btn btn-primary" th:href="@{/customer/toIndexCustomer}" >返回</a>-->
+<!--                    <a class="btn btn-primary" th:href="@{/customer/torecharge}">充值</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </form>-->
+
+
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--      引入js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>余额</title>
+</head>
+
+<body style="background-color: aliceblue">
+
+<div class="container" style=" width:1200px;margin-left:500px;margin-top: 120px" >
+
+    <div class="row clearfix" style="align-content: center">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    <small>钱包余额----------显示钱包的总金额</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <form >
+        <div class="form-group">
+            <div class="row" >
+                <div class="col-md-1">   <label >用户</label></div>
+                <div class="col-md-3">   <p th:text="${wallet.getUsercount()}" class="form-control"   required></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-1">   <label >剩余金额</label></div>
+                <div class="col-md-3">  <p th:text="${wallet.getBalance()}" class="form-control"  required></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+                <a class="btn btn-primary" th:href="@{/customer/toIndexCustomer}" >返回</a>
+            </div>
+            <div class="col-md-1">
+                <a class="btn btn-primary" th:href="@{/customer/torecharge}">充值</a>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
