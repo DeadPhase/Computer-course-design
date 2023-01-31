@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zyz.bookshopmanage.mapper.TypeInfoMapper">
+    <!--分页查询商品种类信息-->
+    <select id="findAllTypeInfo" resultType="com.zyz.bookshopmanage.pojo.TypeInfo">
+        select * from closemanage.type_info  limit #{startIndex},#{pageSize}
+    </select>
+
+    <!--查询化妆品种类总数-->
+    <select id="findTypeInfoTotals" resultType="Long">
+        select count(*) from closemanage.type_info
+    </select>
+
+
+    <!-- 根据商品种类查找-->
+    <select id="findByName" resultType="com.zyz.bookshopmanage.pojo.TypeInfo">
+        select * from closemanage.type_info where name = #{name}
+    </select>
+
+
+</mapper>

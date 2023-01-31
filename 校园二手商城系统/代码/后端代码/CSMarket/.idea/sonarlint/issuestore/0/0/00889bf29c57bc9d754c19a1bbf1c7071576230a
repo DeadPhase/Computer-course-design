@@ -1,0 +1,25 @@
+
+d
+java:S4488œ"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(‡Í¸Éúÿÿÿÿ
+^
+java:S1192T"HDefine a constant instead of duplicating this literal "id_Card" 3 times.(–ÌÝŒ
+f
+java:S11926"KDefine a constant instead of duplicating this literal "errMessage" 8 times.(žòÃ®øÿÿÿÿ
+o
+java:S2293¡"YReplace the type specification in this constructor call with the diamond operator ("<>").(’Šü
+`
+java:S4488|"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(×Ç£Ú
+i
+java:S4488Q"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(×üâ•úÿÿÿÿ
+`
+java:S11558">Use isEmpty() to check whether the collection is empty or not.(óø¿þÿÿÿÿ8• ×ÿ±0
+c
+java:S4488e"HReplace "@RequestMapping(method = RequestMethod.PUT)" with "@PutMapping"(Ã×Ã…ýÿÿÿÿ
+a
+java:S25835"DChange this condition so that it does not always evaluate to "false"(ºá8äìÛÿ±0
+e
+java:S4488%"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ûµµ üÿÿÿÿ
+d
+java:S4488´"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÎÂá¼ÿÿÿÿÿ
+Z
+java:S1155¹">Use isEmpty() to check whether the collection is empty or not.(­¢Í’ÿÿÿÿÿ

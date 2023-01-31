@@ -1,0 +1,6 @@
+
+r
+java:S1488"\Immediately return this expression instead of assigning it to the temporary variable "time".(ØÎşø
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Á‘È¶üÿÿÿÿ
+O
+java:S1118":Add a private constructor to hide the implicit public one.(ÎÓÓ$

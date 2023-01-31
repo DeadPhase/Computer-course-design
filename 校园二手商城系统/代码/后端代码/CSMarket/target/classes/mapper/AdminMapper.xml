@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zyz.bookshopmanage.mapper.AdminMapper">
+
+    <!--    分页查询所有管理员用户-->
+    <select id="findAdminInfo" parameterType="Map" resultType="com.zyz.bookshopmanage.pojo.Admin">
+        select * from closemanage.admin_info limit #{startIndex},#{pageSize}
+    </select>
+    <!--    查询用户的总数-->
+    <select id="findAdminTotals" resultType="Long">
+        select count(*) from closemanage.admin_info
+    </select>
+
+
+
+
+</mapper>
