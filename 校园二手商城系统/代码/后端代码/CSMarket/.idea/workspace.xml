@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10d0a16c-0f3f-467a-a5c9-2668301e2782" name="Default Changelist" comment="1、实现验证码验证修改手机号">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zyz/bookshopmanage/controller/RedisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zyz/bookshopmanage/controller/RedisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zyz/bookshopmanage/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zyz/bookshopmanage/service/UserService.class" afterDir="false" />
-    </list>
+    <list default="true" id="10d0a16c-0f3f-467a-a5c9-2668301e2782" name="Default Changelist" comment="1、实现验证码验证修改手机号" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -190,7 +187,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -225,7 +222,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="E:\work\maven\apache-maven-3.3.9" />
+        <option name="mavenHome" value="E:/work/maven/apache-maven-3.3.9" />
         <option name="userSettingsFile" value="E:\work\apache-maven-3.3.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -458,7 +455,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="idea.background.frame" value="G:\360MoveData\Users\静小文\Desktop\轮播图\1.jpg,63,scale,center,flipH" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../招商银行POC项目/招商银行信创CRS/Trunk/Src/CMBTMKLoader" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../workspace/谷粒商城/大型电商--谷粒商城/代码/后端代码/gulimall" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -470,23 +467,12 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RunManager" selected="Spring Boot.BookshopmanageApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookShopManage" />
       <extension name="coverage">
@@ -701,6 +687,9 @@
       <workItem from="1672985925352" duration="2489000" />
       <workItem from="1673520892665" duration="90000" />
       <workItem from="1675159919201" duration="643000" />
+      <workItem from="1675162150200" duration="182000" />
+      <workItem from="1675210428625" duration="322000" />
+      <workItem from="1675404993375" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="1、建立springboot项目">
       <created>1654156978124</created>

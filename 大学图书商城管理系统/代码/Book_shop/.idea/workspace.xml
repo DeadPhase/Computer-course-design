@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="427349e6-37f0-45ec-8c0c-c0af1dd7023c" name="Default Changelist" comment="" />
+    <list default="true" id="427349e6-37f0-45ec-8c0c-c0af1dd7023c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../校园二手商城系统/代码/后端代码/CSMarket/src/main/java/com/zyz/bookshopmanage/BookShopManageApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../校园二手商城系统/代码/后端代码/CSMarket/src/main/java/com/zyz/bookshopmanage/BookShopManageApplication.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,7 +197,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -336,7 +338,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../java学习资料(后端)/github管理后端学习资料/后端学习/分布式微服务/SpringCloud学习/代码/SpringClound2023" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -381,17 +383,6 @@
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="DemoApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
@@ -480,9 +471,9 @@
       <item itemvalue="JUnit.DemoApplicationTests.testLookBookId" />
       <item itemvalue="JUnit.DemoApplicationTests.testLookBuy" />
       <item itemvalue="JUnit.DemoApplicationTests.test" />
+      <item itemvalue="JUnit.DemoApplicationTests" />
       <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="Spring Boot.DemoApplication (1)" />
-      <item itemvalue="JUnit.DemoApplicationTests" />
     </list>
     <recent_temporary>
       <list>
@@ -604,6 +595,9 @@
       <workItem from="1638758724779" duration="4090000" />
       <workItem from="1673797740666" duration="158000" />
       <workItem from="1673797909159" duration="607000" />
+      <workItem from="1675418586310" duration="62000" />
+      <workItem from="1675676342283" duration="581000" />
+      <workItem from="1676422909299" duration="322000" />
     </task>
     <task id="LOCAL-00001" summary="创建一个springboot项目，并测试在controller跳转到指定页面，显示图片">
       <created>1634006539829</created>
@@ -1002,6 +996,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&#10;&#10;1、完成了、根据当前登录用户来查询当前用户购物车所包含的商品。在购买商品的时候、根据当前用户账号、加入到该用户的购物车中" />

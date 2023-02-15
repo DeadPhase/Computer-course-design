@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * 扫描mapper接口所在的包
  */
 /**
- * @author 静小文    化妆品种类
+ * @author 静小文    化妆品种类444
  * @version 1.0
  * @data 2022/9/9 10:36
  */
